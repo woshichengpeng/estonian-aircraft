@@ -54,11 +54,11 @@ interface IAircraft {
             continue;
         }
 
-        const registration = (xpath.select1('.//td[2]', row) as Node).textContent!.trim();
-        const type = (xpath.select1('.//td[5]', row) as Node).textContent!.trim();
-        const serialNumber = (xpath.select1('.//td[6]', row) as Node).textContent!.trim();
-        const owner = (xpath.select1('.//td[7]', row) as Node).textContent!.trim();
-        const operator = (xpath.select1('.//td[8]', row) as Node).textContent!.trim();
+        const registration = (xpath.select('.//td[2]', row)[0] as Node).textContent!.trim();
+        const type = (xpath.select('.//td[5]', row)[0] as Node).textContent!.trim();
+        const serialNumber = (xpath.select('.//td[6]', row)[0] as Node).textContent!.trim();
+        const owner = (xpath.select('.//td[7]', row)[0] as Node).textContent!.trim();
+        const operator = (xpath.select('.//td[8]', row)[0] as Node).textContent!.trim();
 
         aircraft.push({
             registration,
