@@ -29,21 +29,68 @@
 <link rel="stylesheet" media="all" href="/profiles/vp_distro/themes/vp_distro_theme/assets/static/vendor/fontawesome-free/css/brands.css" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_v52pnKvzGMwJsCsbQob1gLXKl-3n3S7iFQHISwvruAA.css" />
 <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap&amp;subset=cyrillic" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Mfmh9y_1y8TBa_japkpOheOSIJ9HqpgxFNn4xefj72A.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_oSgbjOdfYaNZBnAY_yKNKrdWdUYLs0jY71AMkJdl-gA.css" />
 
     
 <!--[if lte IE 8]>
 <script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
 <![endif]-->
 
+
   </head>
   <body id="top" class="path-node page-node-type-article">
-        <a href="#main-content" class="visually-hidden focusable skip-link">
+  <script>
+    if(document.cookie.match(/^(.*;)?\s*high_contrast\s*=\s*[^;]+(.*)?$/)) {
+      document.body.classList.add('high-contrast');
+    }
+  </script>
+      <a href="#main-content" class="visually-hidden focusable skip-link">
       Liigu edasi põhisisu juurde
     </a>
     
       <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
-    <div class="container-fluid">
+        <div class="modal right fade modal-lg-vp" id="accessibility-modal" tabindex="-1" aria-labelledby="accessibility"
+     style="display: none;" aria-hidden="true">
+    <div class="modal-dialog box-shadow-sm" role="document">
+        <div class="modal-content pb-5">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <h2>Juurdepääsetavus</h2>
+                
+
+                <h3>Contrast</h3>
+                <div class="form-group custom-control custom-radio d-inline-flex">
+                    <input type="radio" checked="" class="custom-control-input" id="default-contrast" name="contrast">
+                    <label class="custom-control-label" for="default-contrast">
+                        Vaikimisi seaded
+                    </label>
+                </div>
+                <div class="form-group custom-control custom-radio d-inline-flex mb-3">
+                    <input type="radio" class="custom-control-input" id="yellow-contrast" name="contrast">
+                    <label class="custom-control-label" for="yellow-contrast">
+                        Black background and yellow text
+                    </label>
+                </div>
+                <button type="button" class="btn btn-outline-primary" id="accessibility-modal-restart">
+                    <span class="">Restore defaults</span>
+                    <svg class="c-icon btn-abs-arrow-vp">
+                        <use xlink:href="#sprite-icon_arrow_right"></use>
+                    </svg>
+                </button>
+                <button type="button" data-dismiss="modal" class="btn btn-primary" id="accessibility-modal-save">
+                    <span class="">Confirm selection</span>
+                    <svg class="c-icon btn-abs-arrow-vp">
+                        <use xlink:href="#sprite-icon_arrow_right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
   <div class="row">
             <div class="region region-header vp-nav-container">
     <div class="nav-desktop-vp">
@@ -55,7 +102,7 @@
 
     <div class="collapse navbar-collapse d-block" id="navbar-top">
       <div class="navbar-top-left-vp d-flex">
-        <a class="nav-link external-link-vp" href="/juurdepaasetavus">
+        <a class="nav-link external-link-vp text-white" data-toggle="modal" data-target="#accessibility-modal">
           <svg class="c-icon ">
             <use xlink:href="/profiles/vp_distro/themes/vp_distro_theme/assets/dist/spritemap.svg#sprite-icon_accessibility"></use>
           </svg>
@@ -2061,15 +2108,16 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary text-white w-100 py-2 d-xl-none">
       <div class="navbar-nav w-100 bg-secondary text-white w-100">
         
-
-<ul class="non-dropdown-items-vp mb-0">
-      <li><a href="https://eteenindus.mnt.ee/main.jsf?lang=et" class="nav-link">E-teenindus</a></li>
-      <li><a href="https://mkm.ee/et" class="nav-link">MKM</a></li>
-      <li><a href="https://www.eesti.ee/et/" class="nav-link">Eesti.ee</a></li>
-  </ul>
-
-<ul class="mb-0 top-dropdown-items-vp">
-  </ul>
+            <ul class="list-unstyled non-dropdown-items-vp mb-0">
+        <li><a href="https://eteenindus.mnt.ee/main.jsf?lang=et" class="nav-link">E-teenindus</a></li>
+      </ul>
+                <ul class="list-unstyled non-dropdown-items-vp mb-0">
+        <li><a href="https://mkm.ee/et" class="nav-link">MKM</a></li>
+      </ul>
+                <ul class="list-unstyled non-dropdown-items-vp mb-0">
+        <li><a href="https://www.eesti.ee/et/" class="nav-link">Eesti.ee</a></li>
+      </ul>
+      
 
       </div>
     </nav>
@@ -2259,7 +2307,9 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
               <div class="w-100 border-bottom"></div>
                 <div class="container-body-vp container-body-md-vp container mt-4 col-sm-6 field__item" data-aos="fade-up">
   
-  <button class="btn-accordion-collapse" data-close-text="Sulge kõik" data-open-text="Ava kõik" tabindex="0">Ava kõik</button>
+  <div class="accordion-expander-wrapper">
+    <button class="accordion-expander btn-accordion-collapse" data-close-text="Sulge kõik" data-open-text="Ava kõik" tabindex="0">Ava kõik</button>
+  </div>
   <div id="accordion" class="collapse-vp w-100 mb-3 paragraph paragraph--type--accordion paragraph--view-mode--default">
           
 
@@ -2328,7 +2378,7 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
 
 <div class="w-100 table-responsive"><table border="1" cellpadding="1" cellspacing="1" class=" table table-bordered table-bordered-vp"><tbody><tr><td></td>
 			<td>
-			<p>Register seisuga : 03.09.2021 /<em>updated</em><em> </em> </p>
+			<p>Register seisuga : 08.09.2021 /<em>updated</em><em> </em> </p>
 			</td>
 			<td></td>
 			<td></td>
@@ -3003,14 +3053,6 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
 			<td>FortAero Asia Limited</td>
 			<td>Fort Aero AS</td>
 		</tr><tr><td></td>
-			<td>ES - ERX</td>
-			<td></td>
-			<td></td>
-			<td>Hawker 850XP</td>
-			<td>258810</td>
-			<td>Cambourne Limited</td>
-			<td>Fort Aero AS</td>
-		</tr><tr><td></td>
 			<td>
 			<p>ES - PHR</p>
 			</td>
@@ -3428,7 +3470,7 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
 			<td></td>
 			<td>Sonaca</td>
 			<td>28</td>
-			<td>AS Pakker Avio</td>
+			<td>AS LHV Pank</td>
 			<td>AS Pakker Avio</td>
 		</tr><tr><td></td>
 			<td>ES - ESR</td>
@@ -3436,7 +3478,7 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
 			<td></td>
 			<td>Sonaca</td>
 			<td>29</td>
-			<td>AS Pakker Avio</td>
+			<td>AS LHV Pank</td>
 			<td>AS Pakker Avio</td>
 		</tr><tr><td></td>
 			<td>
@@ -3734,6 +3776,18 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
 			<p>Konna OÜ</p>
 			</td>
 			<td>Konna OÜ</td>
+		</tr><tr><td></td>
+			<td>ES - ARM</td>
+			<td></td>
+			<td></td>
+			<td>Robinson R44</td>
+			<td>          2654</td>
+			<td>
+			<p>Regalis OÜ</p>
+			</td>
+			<td>
+			<p>Regalis OÜ</p>
+			</td>
 		</tr><tr><td></td>
 			<td>
 			<p>ES - HRA</p>
@@ -4950,7 +5004,7 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
       <div class="container-body-vp container-body-md-vp container">
       <div class="row row-large-gutters-vp">
         <div class="col-12 mt-4">
-          <p class="font-size-sm-vp">Viimati uuendatud 03.09.2021</p>
+          <p class="font-size-sm-vp">Viimati uuendatud 08.09.2021</p>
         </div>
       </div>
     </div>
@@ -4995,7 +5049,7 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
 </button>
 
 </div>
-<input autocomplete="off" data-drupal-selector="form-uw3fu4m4ynknwzucx2f1-jjza7ggrgapudbh2x5a96i" type="hidden" name="form_build_id" value="form-uW3FU4M4yNknWZucX2f1_JJza7gGrGaPUdBh2x5a96I" />
+<input autocomplete="off" data-drupal-selector="form-uwnejqqfhrimgk9pjcebb61ecpe4yt3fhwf-sllpxq" type="hidden" name="form_build_id" value="form-uwNejQQfhrImgk9PjcEBb61Ecpe4yT3fHwf__sLLpXQ" />
 <input data-drupal-selector="edit-subscription-emails-form" type="hidden" name="form_id" value="subscription_emails_form" />
 
 </form>
@@ -5074,7 +5128,7 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
 <script src="/sites/default/files/js/js_5v8EJ2RGtEedO56ONt2F5j_5O-GxyGDUoYlwsIG40Aw.js"></script>
 <script src="https://www.google-analytics.com/analytics.js" async></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
-<script src="/sites/default/files/js/js_nKUESDjH1KpMQxFzjft-Ve3Jugx0NBt4bCsCFDuFfWM.js"></script>
+<script src="/sites/default/files/js/js_rY84ziceo0tOR-fh9L_BOT0pSfmPa8MOajWq7YbmWLQ.js"></script>
 <script src="/modules/contrib/eu_cookie_compliance/js/eu_cookie_compliance.js?v=1.9" defer></script>
 
   </body>
