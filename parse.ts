@@ -16,9 +16,7 @@ interface IAircraft {
 
 (async () => {
     const html = await Deno.readTextFile('./data.html');
-    // const xhtml = xmlserializer.serializeToString(html);
     const doc = new DOMParser().parseFromString(html);
-    // const doc = parse5.parse(html);
 
     const table = xpath.select('.//table[ contains( ., "updated" ) ]', doc)[0] as Node;
 
