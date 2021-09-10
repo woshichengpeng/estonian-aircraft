@@ -1,10 +1,5 @@
-// import * as dom from 'https://deno.land/x/html_parser@v0.1.3/src/mod.ts';
-// import { DOMParser } from 'https://deno.land/x/deno_dom@v0.1.13-alpha/src/dom/dom-parser.ts';
-// import * as htmlparser2 from 'https://cdn.skypack.dev/htmlparser2?dts';
-// import { DOMParser, Node } from 'https://esm.sh/parse5';
-// import * as xmlserializer from 'https://esm.sh/xmlserializer';
-import { DOMParser } from 'https://esm.sh/@xmldom/xmldom';
-import * as xpath from 'https://esm.sh/xpath';
+import { DOMParser } from 'https://cdn.skypack.dev/@xmldom/xmldom?dts';
+import * as xpath from 'https://cdn.skypack.dev/xpath?dts';
 
 interface IResult {
     lastUpdated: Date;
