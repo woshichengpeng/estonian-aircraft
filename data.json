@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2021-03-09T00:00:00.000Z",
+  "lastUpdated": "2021-08-09T00:00:00.000Z",
   "aircraft": [
     {
       "registration": "ES - SAM",
@@ -394,13 +394,6 @@
       "operator": "Fort Aero AS"
     },
     {
-      "registration": "ES - ERX",
-      "type": "Hawker 850XP",
-      "serialNumber": "258810",
-      "owner": "Cambourne Limited",
-      "operator": "Fort Aero AS"
-    },
-    {
       "registration": "ES - PHR",
       "type": "Hawker 750",
       "serialNumber": "HB-33",
@@ -635,14 +628,14 @@
       "registration": "ES - ESP",
       "type": "Sonaca",
       "serialNumber": "28",
-      "owner": "AS Pakker Avio",
+      "owner": "AS LHV Pank",
       "operator": "AS Pakker Avio"
     },
     {
       "registration": "ES - ESR",
       "type": "Sonaca",
       "serialNumber": "29",
-      "owner": "AS Pakker Avio",
+      "owner": "AS LHV Pank",
       "operator": "AS Pakker Avio"
     },
     {
@@ -826,6 +819,13 @@
       "serialNumber": "1100",
       "owner": "Konna OÜ",
       "operator": "Konna OÜ"
+    },
+    {
+      "registration": "ES - ARM",
+      "type": "Robinson R44",
+      "serialNumber": "2654",
+      "owner": "Regalis OÜ",
+      "operator": "Regalis OÜ"
     },
     {
       "registration": "ES - HRA",
