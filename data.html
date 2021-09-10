@@ -29,21 +29,68 @@
 <link rel="stylesheet" media="all" href="/profiles/vp_distro/themes/vp_distro_theme/assets/static/vendor/fontawesome-free/css/brands.css" />
 <link rel="stylesheet" media="all" href="/sites/default/files/css/css_v52pnKvzGMwJsCsbQob1gLXKl-3n3S7iFQHISwvruAA.css" />
 <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap&amp;subset=cyrillic" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Mfmh9y_1y8TBa_japkpOheOSIJ9HqpgxFNn4xefj72A.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_oSgbjOdfYaNZBnAY_yKNKrdWdUYLs0jY71AMkJdl-gA.css" />
 
     
 <!--[if lte IE 8]>
 <script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
 <![endif]-->
 
+
   </head>
   <body id="top" class="path-node page-node-type-article">
-        <a href="#main-content" class="visually-hidden focusable skip-link">
+  <script>
+    if(document.cookie.match(/^(.*;)?\s*high_contrast\s*=\s*[^;]+(.*)?$/)) {
+      document.body.classList.add('high-contrast');
+    }
+  </script>
+      <a href="#main-content" class="visually-hidden focusable skip-link">
       Liigu edasi põhisisu juurde
     </a>
     
       <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
-    <div class="container-fluid">
+        <div class="modal right fade modal-lg-vp" id="accessibility-modal" tabindex="-1" aria-labelledby="accessibility"
+     style="display: none;" aria-hidden="true">
+    <div class="modal-dialog box-shadow-sm" role="document">
+        <div class="modal-content pb-5">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <h2>Juurdepääsetavus</h2>
+                
+
+                <h3>Contrast</h3>
+                <div class="form-group custom-control custom-radio d-inline-flex">
+                    <input type="radio" checked="" class="custom-control-input" id="default-contrast" name="contrast">
+                    <label class="custom-control-label" for="default-contrast">
+                        Vaikimisi seaded
+                    </label>
+                </div>
+                <div class="form-group custom-control custom-radio d-inline-flex mb-3">
+                    <input type="radio" class="custom-control-input" id="yellow-contrast" name="contrast">
+                    <label class="custom-control-label" for="yellow-contrast">
+                        Black background and yellow text
+                    </label>
+                </div>
+                <button type="button" class="btn btn-outline-primary" id="accessibility-modal-restart">
+                    <span class="">Restore defaults</span>
+                    <svg class="c-icon btn-abs-arrow-vp">
+                        <use xlink:href="#sprite-icon_arrow_right"></use>
+                    </svg>
+                </button>
+                <button type="button" data-dismiss="modal" class="btn btn-primary" id="accessibility-modal-save">
+                    <span class="">Confirm selection</span>
+                    <svg class="c-icon btn-abs-arrow-vp">
+                        <use xlink:href="#sprite-icon_arrow_right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
   <div class="row">
             <div class="region region-header vp-nav-container">
     <div class="nav-desktop-vp">
@@ -55,7 +102,7 @@
 
     <div class="collapse navbar-collapse d-block" id="navbar-top">
       <div class="navbar-top-left-vp d-flex">
-        <a class="nav-link external-link-vp" href="/juurdepaasetavus">
+        <a class="nav-link external-link-vp text-white" data-toggle="modal" data-target="#accessibility-modal">
           <svg class="c-icon ">
             <use xlink:href="/profiles/vp_distro/themes/vp_distro_theme/assets/dist/spritemap.svg#sprite-icon_accessibility"></use>
           </svg>
@@ -381,6 +428,13 @@
   <div class="paragraph paragraph--type--menu-section-links-item paragraph--view-mode--default">
           
             <div class="field field--name-field-menu-section-links-url field--type-link field--label-hidden field__item"><a href="/ohutus-ja-jarelevalve/lennundusjulgestus/julgestusinstruktorid" class="list-group-item list-group-item-action font-weight-normal" data-drupal-link-system-path="node/448">Julgestusinstruktorid</a></div>
+      
+      </div>
+</div>
+              <div class="field__item">
+  <div class="paragraph paragraph--type--menu-section-links-item paragraph--view-mode--default">
+          
+            <div class="field field--name-field-menu-section-links-url field--type-link field--label-hidden field__item"><a href="https://transpordiamet.ee/ohutus-ja-jarelevalve/lennundusjulgestus#lennukauba-ja-posti" class="list-group-item list-group-item-action font-weight-normal">Lennukauba- ja posti käitamine</a></div>
       
       </div>
 </div>
@@ -1740,6 +1794,13 @@
       
       </div>
 </div>
+              <div class="field__item">
+  <div class="paragraph paragraph--type--menu-section-links-item paragraph--view-mode--default">
+          
+            <div class="field field--name-field-menu-section-links-url field--type-link field--label-hidden field__item"><a href="/soiduk-laev-lennuk/laevad/laevad-eesti-lipu-alla" class="list-group-item list-group-item-action font-weight-normal" data-drupal-link-system-path="node/358">Laevad Eesti lipu alla</a></div>
+      
+      </div>
+</div>
           </div>
   
       </div>
@@ -2047,15 +2108,16 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary text-white w-100 py-2 d-xl-none">
       <div class="navbar-nav w-100 bg-secondary text-white w-100">
         
-
-<ul class="non-dropdown-items-vp mb-0">
-      <li><a href="https://eteenindus.mnt.ee/main.jsf?lang=et" class="nav-link">E-teenindus</a></li>
-      <li><a href="https://mkm.ee/et" class="nav-link">MKM</a></li>
-      <li><a href="https://www.eesti.ee/et/" class="nav-link">Eesti.ee</a></li>
-  </ul>
-
-<ul class="mb-0 top-dropdown-items-vp">
-  </ul>
+            <ul class="list-unstyled non-dropdown-items-vp mb-0">
+        <li><a href="https://eteenindus.mnt.ee/main.jsf?lang=et" class="nav-link">E-teenindus</a></li>
+      </ul>
+                <ul class="list-unstyled non-dropdown-items-vp mb-0">
+        <li><a href="https://mkm.ee/et" class="nav-link">MKM</a></li>
+      </ul>
+                <ul class="list-unstyled non-dropdown-items-vp mb-0">
+        <li><a href="https://www.eesti.ee/et/" class="nav-link">Eesti.ee</a></li>
+      </ul>
+      
 
       </div>
     </nav>
@@ -2245,7 +2307,9 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
               <div class="w-100 border-bottom"></div>
                 <div class="container-body-vp container-body-md-vp container mt-4 col-sm-6 field__item" data-aos="fade-up">
   
-  <button class="btn-accordion-collapse" data-close-text="Sulge kõik" data-open-text="Ava kõik" tabindex="0">Ava kõik</button>
+  <div class="accordion-expander-wrapper">
+    <button class="accordion-expander btn-accordion-collapse" data-close-text="Sulge kõik" data-open-text="Ava kõik" tabindex="0">Ava kõik</button>
+  </div>
   <div id="accordion" class="collapse-vp w-100 mb-3 paragraph paragraph--type--accordion paragraph--view-mode--default">
           
 
@@ -2314,7 +2378,7 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
 
 <div class="w-100 table-responsive"><table border="1" cellpadding="1" cellspacing="1" class=" table table-bordered table-bordered-vp"><tbody><tr><td></td>
 			<td>
-			<p>Register seisuga : 03.09.2021 /<em>updated</em><em> </em> </p>
+			<p>Register seisuga : 08.09.2021 /<em>updated</em><em> </em> </p>
 			</td>
 			<td></td>
 			<td></td>
@@ -2989,14 +3053,6 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
 			<td>FortAero Asia Limited</td>
 			<td>Fort Aero AS</td>
 		</tr><tr><td></td>
-			<td>ES - ERX</td>
-			<td></td>
-			<td></td>
-			<td>Hawker 850XP</td>
-			<td>258810</td>
-			<td>Cambourne Limited</td>
-			<td>Fort Aero AS</td>
-		</tr><tr><td></td>
 			<td>
 			<p>ES - PHR</p>
 			</td>
@@ -3414,7 +3470,7 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
 			<td></td>
 			<td>Sonaca</td>
 			<td>28</td>
-			<td>AS Pakker Avio</td>
+			<td>AS LHV Pank</td>
 			<td>AS Pakker Avio</td>
 		</tr><tr><td></td>
 			<td>ES - ESR</td>
@@ -3422,7 +3478,7 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
 			<td></td>
 			<td>Sonaca</td>
 			<td>29</td>
-			<td>AS Pakker Avio</td>
+			<td>AS LHV Pank</td>
 			<td>AS Pakker Avio</td>
 		</tr><tr><td></td>
 			<td>
@@ -3720,6 +3776,18 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
 			<p>Konna OÜ</p>
 			</td>
 			<td>Konna OÜ</td>
+		</tr><tr><td></td>
+			<td>ES - ARM</td>
+			<td></td>
+			<td></td>
+			<td>Robinson R44</td>
+			<td>          2654</td>
+			<td>
+			<p>Regalis OÜ</p>
+			</td>
+			<td>
+			<p>Regalis OÜ</p>
+			</td>
 		</tr><tr><td></td>
 			<td>
 			<p>ES - HRA</p>
@@ -4936,7 +5004,7 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
       <div class="container-body-vp container-body-md-vp container">
       <div class="row row-large-gutters-vp">
         <div class="col-12 mt-4">
-          <p class="font-size-sm-vp">Viimati uuendatud 03.09.2021</p>
+          <p class="font-size-sm-vp">Viimati uuendatud 08.09.2021</p>
         </div>
       </div>
     </div>
@@ -4981,7 +5049,7 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
 </button>
 
 </div>
-<input autocomplete="off" data-drupal-selector="form-uravaaon3gonpf5o53a3nzg88zlimvlie2kzurvepsy" type="hidden" name="form_build_id" value="form-UrAVaAoN3gONPf5o53A3nzg88zLimVliE2KZurvEPSY" />
+<input autocomplete="off" data-drupal-selector="form-ociip7mj6-8khcqyovo49vcykm-1i5n-qqqbhnvhazq" type="hidden" name="form_build_id" value="form-ocIiP7Mj6-8KHCqYOvo49vcykM_1i5N-QqQbhNvHazQ" />
 <input data-drupal-selector="edit-subscription-emails-form" type="hidden" name="form_id" value="subscription_emails_form" />
 
 </form>
@@ -5054,12 +5122,13 @@ e-post: <a href="mailto:info@transpordiamet.ee">info@transpordiamet.ee</a><br /
   </div>
 
     
-    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/348","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"et"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"addtoany\/addtoany,ajax_loader\/ajax_loader.throbber,classy\/node,core\/html5shiv,core\/jquery.form,eu_cookie_compliance\/eu_cookie_compliance_bare,fontawesome\/fontawesome.webfonts.brands,fontawesome\/fontawesome.webfonts.regular,fontawesome\/fontawesome.webfonts.solid,paragraphs\/drupal.paragraphs.unpublished,system\/base,vp_distro_theme\/accordion,vp_distro_theme\/main","theme":"vp_distro_theme","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true,"\/soiduk-laev-lennuk\/lennundustehnika\/ohusoidukite-register?ajax_form=1":true},"ajaxLoader":{"markup":"\u003Csvg xmlns=\u0022http:\/\/www.w3.org\/2000\/svg\u0022 width=\u002245\u0022 height=\u002245\u0022 viewBox=\u00220 0 45 45\u0022 class=\u0022c-icon ajax-loader-vp\u0022 style=\u0022stroke-dashoffset: -656.0\u0022\u003E\n                \u003Cg\u003E\n                    \u003Cg opacity=\u0022.3\u0022\u003E\n                        \u003Cpath fill=\u0022none\u0022 stroke=\u0022#00396f\u0022 stroke-miterlimit=\u002250\u0022 stroke-dasharray=\u00220\u0022 d=\u0022M22.5 44C34.374 44 44 34.374 44 22.5S34.374 1 22.5 1 1 10.626 1 22.5 10.626 44 22.5 44z\u0022\u003E\u003C\/path\u003E\n                    \u003C\/g\u003E\n                    \u003Cg\u003E\n                        \u003Cpath fill=\u0022none\u0022 stroke=\u0022#003087\u0022 stroke-miterlimit=\u002250\u0022 stroke-width=\u00223\u0022 d=\u0022M22.5 44C34.374 44 44 34.374 44 22.5S34.374 1 22.5 1 1 10.626 1 22.5 10.626 44 22.5 44z\u0022\u003E\u003C\/path\u003E\n                    \u003C\/g\u003E\n            \u003C\/g\u003E\u003C\/svg\u003E","hideAjaxMessage":true,"alwaysFullscreen":false,"throbberPosition":"body"},"ajax":{"edit-submit":{"callback":["Drupal\\vp_distro_newsletter\\Form\\SubscriptionEmailsForm","showSubscribeDialog"],"event":"click","progress":{"type":"none"},"wrapper":"newsletter-email-wrapper-form","url":"\/soiduk-laev-lennuk\/lennundustehnika\/ohusoidukite-register?ajax_form=1","dialogType":"ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":""}}},"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":true,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv class=\u0022cookie-consent-vp bg-secondary py-2 shadow-sm d-print-none d-block eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content container-body-vp container d-flex justify-content-between\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message text-white\u0022\u003E\n      \u003Cp\u003ETagamaks lehe mugavama ja isikup\u00e4rasema kasutamise, kasutab k\u00e4esolev veebileht k\u00fcpsiseid.\u003C\/p\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button text-white\u0022\u003ERohkem teavet\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons text-center\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button btn btn-sm btn-outline-light mb-1 mb-sm-0 mr-sm-1\u0022\u003EN\u00f5ustun\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button btn btn-sm btn-primary\u0022\u003EEi soovi\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022cookie-consent-vp bg-secondary py-2 shadow-sm d-print-none d-block eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content container-body-vp container d-flex justify-content-between\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message text-white\u0022\u003E\n      \n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button text-white\u0022\u003ERohkem teavet\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons text-center\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button btn btn-sm btn-outline-light mb-1 mb-sm-0 mr-sm-1\u0022\u003EN\u00f5ustun\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button btn btn-sm btn-primary\u0022\u003EEi soovi\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":true,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"https:\/\/www.valitsus.ee\/kupsised","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"et","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":false,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"set_cookie_session_zero_on_disagree":0,"disagree_do_not_show_popup":false,"method":"opt_in","automatic_cookies_removal":true,"allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab btn btn-sm btn-outline-primary bg-white position-absolute\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022bg-secondary py-2 shadow-sm d-print-none position-relative\u0022\u003E\n  \u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n    \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content container-body-vp container d-flex justify-content-between\u0022\u003E\n      \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message text-white\u0022\u003E\n        \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n      \u003C\/div\u003E\n      \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n        \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button btn btn-sm btn-primary\u0022\u003EWithdraw consent\u003C\/button\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"reload_options":0,"reload_routes_list":"","withdraw_button_on_info_popup":false,"cookie_categories":[],"cookie_categories_details":[],"enable_save_preferences_button":true,"containing_element":"body","settings_tab_enabled":false},"svg_sprite":"\/profiles\/vp_distro\/themes\/vp_distro_theme\/assets\/dist\/spritemap.svg","user":{"uid":0,"permissionsHash":"dd8b68942c323c38a0e9ec7b493488bd7e3f744a4cb5df6cc9cee096b19f4047"}}</script>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/348","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"et"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"addtoany\/addtoany,ajax_loader\/ajax_loader.throbber,classy\/node,core\/html5shiv,core\/jquery.form,eu_cookie_compliance\/eu_cookie_compliance_bare,fontawesome\/fontawesome.webfonts.brands,fontawesome\/fontawesome.webfonts.regular,fontawesome\/fontawesome.webfonts.solid,ga\/analytics,paragraphs\/drupal.paragraphs.unpublished,system\/base,vp_distro_theme\/accordion,vp_distro_theme\/main","theme":"vp_distro_theme","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true,"\/soiduk-laev-lennuk\/lennundustehnika\/ohusoidukite-register?ajax_form=1":true},"ajaxLoader":{"markup":"\u003Csvg xmlns=\u0022http:\/\/www.w3.org\/2000\/svg\u0022 width=\u002245\u0022 height=\u002245\u0022 viewBox=\u00220 0 45 45\u0022 class=\u0022c-icon ajax-loader-vp\u0022 style=\u0022stroke-dashoffset: -656.0\u0022\u003E\n                \u003Cg\u003E\n                    \u003Cg opacity=\u0022.3\u0022\u003E\n                        \u003Cpath fill=\u0022none\u0022 stroke=\u0022#00396f\u0022 stroke-miterlimit=\u002250\u0022 stroke-dasharray=\u00220\u0022 d=\u0022M22.5 44C34.374 44 44 34.374 44 22.5S34.374 1 22.5 1 1 10.626 1 22.5 10.626 44 22.5 44z\u0022\u003E\u003C\/path\u003E\n                    \u003C\/g\u003E\n                    \u003Cg\u003E\n                        \u003Cpath fill=\u0022none\u0022 stroke=\u0022#003087\u0022 stroke-miterlimit=\u002250\u0022 stroke-width=\u00223\u0022 d=\u0022M22.5 44C34.374 44 44 34.374 44 22.5S34.374 1 22.5 1 1 10.626 1 22.5 10.626 44 22.5 44z\u0022\u003E\u003C\/path\u003E\n                    \u003C\/g\u003E\n            \u003C\/g\u003E\u003C\/svg\u003E","hideAjaxMessage":true,"alwaysFullscreen":false,"throbberPosition":"body"},"ga":{"commands":[["create","UA-197318196-1","auto",{"anonymizeIp":true}],["send","pageview"]]},"ajax":{"edit-submit":{"callback":["Drupal\\vp_distro_newsletter\\Form\\SubscriptionEmailsForm","showSubscribeDialog"],"event":"click","progress":{"type":"none"},"wrapper":"newsletter-email-wrapper-form","url":"\/soiduk-laev-lennuk\/lennundustehnika\/ohusoidukite-register?ajax_form=1","dialogType":"ajax","submit":{"_triggering_element_name":"op","_triggering_element_value":""}}},"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":true,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv class=\u0022cookie-consent-vp bg-secondary py-2 shadow-sm d-print-none d-block eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content container-body-vp container d-flex justify-content-between\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message text-white\u0022\u003E\n      \u003Cp\u003ETagamaks lehe mugavama ja isikup\u00e4rasema kasutamise, kasutab k\u00e4esolev veebileht k\u00fcpsiseid.\u003C\/p\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button text-white\u0022\u003ERohkem teavet\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons text-center\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button btn btn-sm btn-outline-light mb-1 mb-sm-0 mr-sm-1\u0022\u003EN\u00f5ustun\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button btn btn-sm btn-primary\u0022\u003EEi soovi\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022cookie-consent-vp bg-secondary py-2 shadow-sm d-print-none d-block eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content container-body-vp container d-flex justify-content-between\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message text-white\u0022\u003E\n      \n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button text-white\u0022\u003ERohkem teavet\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons text-center\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button btn btn-sm btn-outline-light mb-1 mb-sm-0 mr-sm-1\u0022\u003EN\u00f5ustun\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button btn btn-sm btn-primary\u0022\u003EEi soovi\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":true,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"https:\/\/www.valitsus.ee\/kupsised","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"et","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":false,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"set_cookie_session_zero_on_disagree":0,"disagree_do_not_show_popup":false,"method":"opt_in","automatic_cookies_removal":true,"allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab btn btn-sm btn-outline-primary bg-white position-absolute\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022bg-secondary py-2 shadow-sm d-print-none position-relative\u0022\u003E\n  \u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n    \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content container-body-vp container d-flex justify-content-between\u0022\u003E\n      \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message text-white\u0022\u003E\n        \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n      \u003C\/div\u003E\n      \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n        \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button btn btn-sm btn-primary\u0022\u003EWithdraw consent\u003C\/button\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"reload_options":0,"reload_routes_list":"","withdraw_button_on_info_popup":false,"cookie_categories":[],"cookie_categories_details":[],"enable_save_preferences_button":true,"containing_element":"body","settings_tab_enabled":false},"svg_sprite":"\/profiles\/vp_distro\/themes\/vp_distro_theme\/assets\/dist\/spritemap.svg","user":{"uid":0,"permissionsHash":"dd8b68942c323c38a0e9ec7b493488bd7e3f744a4cb5df6cc9cee096b19f4047"}}</script>
 <script src="/sites/default/files/js/js_yRfUXYog6NOb94nqcX_9Cdu6doeziocfdKM1VI-m8W4.js"></script>
 <script src="https://static.addtoany.com/menu/page.js" async></script>
-<script src="/sites/default/files/js/js_B7t8IVtzflPzaenVwz6FhVHpxPEr-eRxR8JFhKjbvsM.js"></script>
+<script src="/sites/default/files/js/js_5v8EJ2RGtEedO56ONt2F5j_5O-GxyGDUoYlwsIG40Aw.js"></script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
-<script src="/sites/default/files/js/js_nKUESDjH1KpMQxFzjft-Ve3Jugx0NBt4bCsCFDuFfWM.js"></script>
+<script src="/sites/default/files/js/js_rY84ziceo0tOR-fh9L_BOT0pSfmPa8MOajWq7YbmWLQ.js"></script>
 <script src="/modules/contrib/eu_cookie_compliance/js/eu_cookie_compliance.js?v=1.9" defer></script>
 
   </body>
