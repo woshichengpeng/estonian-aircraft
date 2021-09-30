@@ -12,6 +12,7 @@ interface IAircraft {
     serialNumber: string;
     owner: string;
     operator: string;
+    lastSeen: Date;
 }
 
 (async () => {
@@ -59,6 +60,7 @@ interface IAircraft {
             serialNumber,
             owner,
             operator,
+            lastSeen: new Date(),
         });
     }
 
