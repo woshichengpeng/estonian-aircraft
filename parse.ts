@@ -5,7 +5,7 @@ import { ensureFileSync } from "https://deno.land/std@0.106.0/fs/mod.ts";
 interface IStock {
   name: string;
   type: string;
-  id: number;
+  id: string;
   order: string;
 }
 
@@ -51,8 +51,8 @@ interface IOrder {
     const name = (xpath.select("./div[1]", td1)[0] as Node).textContent!.trim();
     const type = (xpath.select("./div[2]/div[1]", td1)[0] as Node).textContent!
       .trim();
-    const id: number =
-      +((xpath.select("./div[2]/div[2]", td1)[0] as Node).textContent!.trim());
+    const id =
+      ((xpath.select("./div[2]/div[2]", td1)[0] as Node).textContent!.trim());
     const order = td2.textContent!.trim();
 
     stocks.push({
