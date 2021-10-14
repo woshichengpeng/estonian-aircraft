@@ -23,7 +23,7 @@ jobs:
       - name: Fetch data
         uses: githubocto/flat@v3
         with:
-          http_url: https://transpordiamet.ee/soiduk-laev-lennuk/lennundustehnika/ohusoidukite-register
+          http_url: https://youzhiyouxing.cn/stages/HBB_4
           downloaded_filename: data.html
   
   parse:
@@ -39,7 +39,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Process
-        run: deno run --config ./tsconfig.json --allow-read --allow-write ./parse.ts
+        env:
+          SEND_KEY: ${{ secrets.sendkey }}
+        run: deno run --config ./tsconfig.json -A ./parse.ts
 
       - name: Commit & Push
         uses: actions-js/push@master
