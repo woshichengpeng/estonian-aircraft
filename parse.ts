@@ -1,6 +1,6 @@
 import { DOMParser } from "https://cdn.skypack.dev/@xmldom/xmldom?dts";
 import * as xpath from "https://cdn.skypack.dev/xpath?dts";
-import { encodeUrl } from "https://deno.land/x/encodeurl/mod.ts";
+import { ensureFileSync } from "https://deno.land/std@0.106.0/fs/mod.ts";
 
 interface IStock {
   name: string;
@@ -15,9 +15,6 @@ interface IOrder {
 }
 
 (async () => {
-  const text = Deno.readTextFileSync("./data.json");
-  const lastOrder: IOrder = JSON.parse(text);
-
   const html = await Deno.readTextFile("./data.html");
   const doc = new DOMParser().parseFromString(html);
 
@@ -30,9 +27,14 @@ interface IOrder {
     (xpath.select('.//p[ contains( ., "温度" ) ]', section)[0] as Node)
       .textContent!.trim();
 
-  if (orderContent == lastOrder.order) {
-    console.log("not update");
-    return;
+  ensureFileSync("./data.json");
+  const text = Deno.readTextFileSync("./data.json");
+  if (text.trim() != "") {
+    const lastOrder: IOrder = JSON.parse(text);
+    if (orderContent == lastOrder.order) {
+      console.log("not update");
+      return;
+    }
   }
 
   const table = xpath.select(
