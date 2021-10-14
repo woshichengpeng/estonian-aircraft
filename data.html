@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html
+  lang="zh-cmn-Hans"
+  data-device-type="browser"
+  class="min-h-full">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0, user-scalable=no" />
+
+<script>
+!function(t,e){"object"==typeof exports&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):(t=t||self).assetsRetry=e()}(this,function(){"use strict";function u(t){return t}function h(){}function t(t){for(var e=Object.getPrototypeOf?Object.getPrototypeOf:function(t){return t.__proto__},r=Object.keys(t);e(t);)r=r.concat(Object.keys(e(t))),t=e(t);return r.filter(function(t){return"constructor"!==t})}function n(t,e){try{return"function"==typeof t[e]}catch(t){return!1}}function f(t){return Array.isArray(t)?t.reduce(function(t,e,r,n){return t[e]=n[(r+1)%n.length],t},{}):t}function y(e,t){return Object.keys(t).filter(function(t){return-1<e.indexOf(t)}).sort(function(t,e){return e.length-t.length})[0]}var e,r,o,g="retryTimes",l="succeeded",b="failed",m="maxRetryCount",E="onRetry",d="onSuccess",O="onFail",j="domain",i="_assetsRetryProxy",p="_assetsRetryOnerror",s="script",c="link",w="data-assets-retry-hooked",A="data-assets-retry-ignore",k="data-retry-id",v=window,R=window.document,a=v.HTMLElement,S=v.HTMLScriptElement,L=v.HTMLStyleElement,T=v.HTMLLinkElement,x=v.HTMLImageElement,_=Object.prototype.hasOwnProperty,M=function(t,e,r){var n=t.indexOf(e);return-1===n?t:t.substring(0,n)+r+t.substring(n+e.length)},N=function(t){return[].slice.call(t)},H=function(e,t,r,n){void 0===r&&(r=h),void 0===n&&(n=!1);var o,i,c,a,u,f=n||e.defer||e.async;"loading"!==R.readyState||/Edge|MSIE|rv:/i.test(navigator.userAgent)||f?(o=R.createElement(s),Object.keys(S.prototype).forEach(function(t){if("src"!==t&&e[t]&&"object"!=typeof e[t])try{o[t]=e[t]}catch(t){}}),o.src=t,o.onload=e.onload,o.onerror=e.onerror,o.setAttribute(k,B()),(i=e.getAttribute("nonce"))&&o.setAttribute("nonce",i),R.getElementsByTagName("head")[0].appendChild(o)):(c=B(),a=e.outerHTML.replace(/data-retry-id="[^"]+"/,"").replace(/src=(?:"[^"]+"|.+)([ >])/,k+"="+c+' src="'+t+'"$1'),R.write(a),(u=R.querySelector("script["+k+'="'+c+'"]'))&&(u.onload=r))},P=function(e){try{return e.rules}catch(t){try{return e.cssRules}catch(t){return null}}},I=function(e,t,r){var n=R.createElement(c);Object.keys(T.prototype).forEach(function(t){if("href"!==t&&e[t]&&"object"!=typeof e[t])try{n[t]=e[t]}catch(t){}}),n.href=t,n.onload=r||e.onload,n.onerror=e.onerror,n.setAttribute(k,B()),R.getElementsByTagName("head")[0].appendChild(n)},C=function(t){return t?t instanceof a?[t.nodeName,t.src,t.href,t.getAttribute(k)].join(";"):"not_supported":"null"},B=function(){return Math.random().toString(36).slice(2)},q=function(t){return t instanceof S||t instanceof x?t.src:t instanceof T?t.href:""},z={},F=function(t,e){var r,n=Z(t,e),o=n[0],i=n[1];return o?(z[o]=z[o]||((r={})[g]=0,r[b]=[],r[l]=[],r),[i,z[o]]):[]},Z=function(t,e){var r,n,o=y(t,e);return o?[(n=o,(r=t).substr(r.indexOf(n)+n.length,r.length)),o]:["",""]};try{r=function(){for(var t=0,e=0,r=arguments.length;e<r;e++)t+=arguments[e].length;for(var n=Array(t),o=0,e=0;e<r;e++)for(var i=arguments[e],c=0,a=i.length;c<a;c++,o++)n[o]=i[c];return n}(t(S.prototype),t(T.prototype)),o={},r.forEach(function(t){o[t]=!0}),e=Object.keys(o)}catch(t){}function $(s,t){var l=t[m],d=f(t[j]),y=t[E];return e.reduce(function(t,r){var e=n(S.prototype,r);return t[r]=e?{value:function(){return s[i][r].apply(s[i],arguments)}}:{set:function(e){var f=s[i];return"onerror"===r?(s[p]=e,void(f.onerror=function(n){if("string"!=typeof n){n.stopPropagation&&n.stopPropagation();var t=function(){return t=s[p],e=f,r=n,"function"!=typeof t?null:t.call(e,r);var t,e,r},e=q(f),r=F(e,d),o=r[0],i=r[1],c=f.hasAttribute(A);if(!o||!i||c)return t();var a=M(e,o,d[o]),u=y(a,e,i);if(null===u)return t();if("string"!=typeof u)throw new Error("a string should be returned in `onRetry` function");i[g]<=l?f instanceof S?H(f,u,h,!0):f instanceof T&&I(f,u):t()}})):"onload"===r?(s._assetsRetryOnload=e,void(s[i].onload=function(t){e&&!e._called&&(e._called=!0,e.call(s[i],t))})):void(f[r]=e)},get:function(){return s[i][r]}},t},{})}var D=function(r){var n=R.createElement;R.createElement=function(t,e){return t===s||t===c?function(t,e){var r;t.setAttribute(w,"true");var n=((r={})[i]=t,r[p]=h,r),o=$(n,e);return Object.defineProperties(n,o),n.onload=h,n.onerror=h,n}(n.call(R,t),r):n.call(R,t,e)}},G=function(r){Object.keys(r).filter(function(t){return n(r,t)}).forEach(function(t){var e=r[t];r[t]=function(){var t=[].slice.call(arguments).map(function(t){return t&&_.call(t,i)?t[i]:t});return e.apply(this,t)}})};var J={};function K(y){function f(t){if(t){var e=t.target||t.srcElement,r=q(e);if(r){var n=F(r,v),o=n[0],i=n[1],c=e instanceof HTMLElement&&e.hasAttribute(A);if(i&&o&&!c){i[g]++,i[b].push(r);var a,u=i[g]>y[m];if(u&&(a=Z(r,v)[0],p(a)),v[o]&&!u){var f=v[o],s=M(r,o,f),l=h(s,r,i);if(null!==l){if("string"!=typeof l)throw new Error("a string should be returned in `onRetry` function");var d=C(e);J[d]||(J[d]=!0,e instanceof S&&!e.getAttribute(w)&&e.src?H(e,l):e instanceof T&&!e.getAttribute(w)&&e.href?I(e,l):e instanceof x&&e.src&&(e.setAttribute(k,B()),e.src=l))}}}}}}var h=y[E],s=y[d],p=y[O],v=y[j];R.addEventListener("error",f,!0),R.addEventListener("load",function(t){var e,r,n,o,i,c,a,u;t&&(e=t.target||t.srcElement,(r=q(e))&&((n=F(r,v))[0],o=n[1],i=Z(r,v)[0],c=function(){o&&o[l].push(r),s(i)},e instanceof T?R.styleSheets&&(a=N(R.styleSheets).filter(function(t){return t.href===e.href})[0],null!==(u=P(a))&&(0!==u.length?c():f(t))):c()))},!0)}function Q(t,e,r,n,o){var i=o[j],c=o[E],a=e.style&&e.style[t];if(a&&!/^url\(["']?data:/.test(a)){var u=a.match(/^url\(["']?(.+?)["']?\)/)||[],f=u[1];if(f){var s=y(f,i);if(s&&i[s]){var l=Object.keys(i).map(function(t){var e=M(f,s,t);return'url("'+c(e,f,null)+'")'}).join(","),d=e.selectorText+("{ "+t.replace(/([a-z])([A-Z])/g,function(t,e,r){return e+"-"+r.toLowerCase()}))+": "+l+" !important; }";try{r.insertRule(d,n.length)}catch(t){r.insertRule(d,0)}}}}}var U={},V=[],W=function(t,o){var i=["backgroundImage","borderImage","listStyleImage"];t.forEach(function(r){var n,t=P(r);null!==t&&((n=N(t)).forEach(function(e){i.forEach(function(t){Q(t,e,r,n,o)})}),r.href&&(U[r.href]=!0),r.ownerNode instanceof L&&V.push(r.ownerNode))})},X=function(t,r){return N(t).filter(function(t){if(!P(t))return!1;if(t.href)return!U[t.href]&&!!y(t.href,r);var e=t.ownerNode;return!(e instanceof L&&-1<V.indexOf(e))})};return function(t){var e,r,n,o;void 0===t&&(t={});try{if("object"!=typeof t[j])throw new Error("opts.domain cannot be non-object.");var i=[m,E,d,O,j],c=Object.keys(t).filter(function(t){return-1===i.indexOf(t)});if(0<c.length)throw new Error("option name: "+c.join(", ")+" is not valid.");var a=((e={})[m]=t[m]||3,e[E]=t[E]||u,e[d]=t[d]||h,e[O]=t[O]||h,e[j]=f(t[j]),e);return D(a),"undefined"!=typeof Node&&G(Node.prototype),"undefined"!=typeof Element&&G(Element.prototype),K(a),r=a,n=R.styleSheets,o=r[j],n&&setInterval(function(){var t=X(R.styleSheets,o);0<t.length&&W(t,r)},250),z}catch(t){v.console&&console.error("[assetsRetry] error captured",t)}}});
+
+
+</script>
+
+<script>
+(function () {
+var maxRetryCount = 4;
+var maxRequestTimes = 1 + maxRetryCount;
+var originDomain = 'youzhiyouxing.cn';
+var domains = [
+  window.location.host,
+  originDomain,
+  'cdn.youzhiyouxing.cn',
+  'asset.youzhiyouxing.cn',
+];
+
+var assetsRetryStatistics = window.assetsRetry({
+  domain: domains,
+  maxRetryCount: maxRetryCount,
+  onRetry: function(currentUrl, originUrl, statistics) {
+    if (!statistics) {
+      return originUrl;
+    }
+
+    var retryTimes = statistics.retryTimes;
+
+    var cdnPrefix = 'https://cdn.youzhiyouxing.cn/static';
+    if (retryTimes > maxRequestTimes) {
+      return null;
+    } else if (originUrl.indexOf(cdnPrefix) === 0 && retryTimes > 3) {
+      return originUrl.replace(cdnPrefix, 'https://' + originDomain);
+    } else {
+      return originUrl;
+    }
+  },
+  onSuccess: function(currentUrl) {
+    var statistics = assetsRetryStatistics[currentUrl];
+    if (statistics) {
+      var retryTimes = statistics.retryTimes;
+
+      if (retryTimes > 0) {
+        window.traceEvent && window.traceEvent('dx', 'error', 'offsite_resource_fail', {
+          url: currentUrl,
+          retry_total: retryTimes,
+          final_status: 0,
+        });
+      }
+    }
+  },
+  onFail: function(currentUrl) {
+    var statistics = assetsRetryStatistics[currentUrl];
+    if (statistics) {
+      var retryTimes = statistics.retryTimes;
+
+      if (retryTimes <= maxRequestTimes) {
+        window.traceEvent && window.traceEvent('dx', 'error', 'offsite_resource_fail', {
+          url: currentUrl,
+          retry_total: retryTimes,
+          final_status: 1,
+        });
+      }
+    }
+  }
+})
+
+}())
+</script>
+
+<meta property="trace:endpoint" content="https://trace.youzhiyouxing.cn/_.png" />
+<meta property="trace:server-query" content="app_ver=&amp;build_ver=&amp;device_id=777855f9-a8a0-4edf-8781-40da048f7507&amp;mfr=&amp;model=&amp;os=&amp;os_ver=&amp;ua=axios%2F0.21.1&amp;user_id=-1" />
+
+<meta charset="UTF-8" content="PiZCZlo1PQ06NhIzGVAzKzcyIyEFFDIvtow4cZvZCfxiO1IendjFLnYp" csrf-param="_csrf_token" method-param="_method" name="csrf-token">
+<meta name="baidu-site-verification" content="code-7SrEF8Kmvi" />
+
+
+
+<title>黑板报 - 第4期</title>
+
+
+  <meta name="color-scheme" content="dark light">
+
+  <script crossorigin src="https://cdn.youzhiyouxing.cn/static/js/ng-auto-theme-3691f1cc8512de4156c079dd536c2f04.js?vsn=d"></script>
+
+    <script crossorigin src="https://cdn.youzhiyouxing.cn/static/js/ng-critical-72904b5ea8fbf6e0321a6c64c9cc19a7.js?vsn=d"></script>
+
+    <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.9.3/skins/default/aliplayer-min.css" />
+    <script defer crossorigin src="https://g.alicdn.com/de/prismplayer/2.9.3/aliplayer-min.js"></script>
+
+    <link crossorigin rel="stylesheet" href="https://cdn.youzhiyouxing.cn/static/css/application-6c4f5a3e82444308328d46b31b85ef19.css?vsn=d" />
+    <script defer crossorigin src="https://cdn.youzhiyouxing.cn/static/js/application-adca6eeb07a30a3e68404685198f1532.js?vsn=d"></script>
+
+    <link crossorigin rel="stylesheet" href="https://cdn.youzhiyouxing.cn/static/css/ng-application-14a95648f4047a6040f8698cca299013.css?vsn=d"/>
+    <script defer crossorigin src="https://cdn.youzhiyouxing.cn/static/js/ng-application-61bea4e7292a2cb726a707b7d6b0db0f.js?vsn=d"></script>
+
+    <script>
+      window.yzyxContext = {};
+      window._onWindowLoaded = [];
+      window.Hooks = {};
+      window.afterload = (fn) => window._onWindowLoaded.push(fn);
+
+      window.yzyxContext.getShareInfo = function() {
+        return {
+          title: '有知有行', // 分享标题
+          desc: '不断提升认知，知行合一', // 分享描述
+          imgUrl: 'https://youzhiyouxing.cn/images/logo-square.png', // 分享图标
+        };
+      };
+    </script>
+
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <script>
+      window.wxConfig = function () {
+        wx.config({
+          debug: false, // 开启调试模式
+          appId: 'wx8bf634ea361e53c3', // 必填，公众号的唯一标识
+          timestamp: 1634218476 , // 必填，生成签名的时间戳
+          nonceStr: '85P_VIWr75QCEvS5', // 必填，生成签名的随机串
+          signature: 'a0158a5aae1c7814062663bf7ceeb1edaf8dd660', // 必填，签名
+          jsApiList: ['updateAppMessageShareData', 'updateTimelineShareData'], // 必填，需要使用的JS接口列表
+          openTagList: ['wx-open-launch-app'] // 可选，需要使用的开放标签列表，例如['wx-open-launch-app']
+        });
+      }
+    </script>
+  </head>
+  <body class="tw-bg-bgd-dimmed-light dark:tw-bg-bgd-dimmed-dark
+    tw-min-h-screen tw-flex
+">
+
+      <div class="tw-fixed tw-top-0 tw-z-40 tw-w-full tw-h-17 md:tw-h-12 app:tw-hidden">
+<header
+  class="tw-hidden browser:tw-block"
+  x-data="{ openMobileMenu: false }"
+  x-init="$watch('openMobileMenu', window.toggleBodyScroll)"
+>
+  <div class="view-container">
+    <div class="logo-name md:tw-hidden"></div>
+    <ul class="tw-flex-1 nav tw-mx-6 tw-flex tw-justify-evenly md:tw-hidden">
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          href="/"
+        >首页</a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          href="/materials"
+        >有知</a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          href="/data"
+        >温度计</a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          href="/join-us"
+        >加入我们</a>
+      </li>
+    </ul>
+
+      <div class="logo-name tw-hidden md:tw-block"></div>
+
+    <div class="tw-flex tw-space-x-6 md:tw-space-x-3">
+      <a class="button md md:tw-hidden" onclick="traceEvent('web_click', 'download', 'app');" href="/download">下载 App</a>
+      <a class="button xs tw-hidden md:tw-flex" onclick="traceEvent('web_click', 'download', 'app');" href="/download">下载 App</a>
+      <button
+        class="tw-hidden md:tw-flex tw-outline-none tw-bg-transparent tw-border-none tw-text-t-normal-light dark:tw-text-t-normal-dark"
+        @click="openMobileMenu = !openMobileMenu"
+        aria-controls="mobile-menu"
+        x-bind:aria-expanded="openMobileMenu.toString()"
+      >
+        <span class="tw-sr-only">打开移动端导航</span>
+        <svg class="tw-h-6 tw-w-6 tw-block" :class="{ 'tw-hidden': openMobileMenu, 'tw-block': !(openMobileMenu) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg class="tw-h-6 tw-w-6 tw-hidden" :class="{ 'tw-block': openMobileMenu, 'tw-hidden': !(openMobileMenu) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+        <a class="button md outline md:tw-hidden" onclick="traceEvent('web_click', 'login', 'page');" href="/user/login">登录 / 注册</a>
+
+    </div>
+  </div>
+  <div
+    x-description="移动端导航"
+    x-cloak
+    class="tw-bg-white-light dark:tw-bg-white-dark tw-z-40 tw-h-0 tw-hidden md:tw-block tw-transition-all tw-overflow-hidden"
+    :class="{ 'tw-h-screen': openMobileMenu, 'tw-h-0': !(openMobileMenu) }"
+  >
+    <ul class="tw-p-6 tw-list-none tw-text-center">
+      <li>
+        <a
+          class="tw-block tw-p-4 tw-text-16 tw-text-t-normal-light dark:tw-text-t-normal-dark tw-font-medium"
+          href="/"
+        >首页</a>
+      </li>
+      <li>
+        <a
+          class="tw-block tw-p-4 tw-text-16 tw-text-t-normal-light dark:tw-text-t-normal-dark tw-font-medium"
+          href="/join-us"
+        >加入我们</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+      </div>
+
+    <div class="tw-relative tw-flex-1 tw-max-w-full
+tw-pt-17 md:tw-pt-12 app:tw-pt-0">
+
+  <div class="tw-absolute tw-z-[-1] tw-left-0 tw-top-0 tw-w-full">
+    <div class="tw-aspect-w-7 tw-aspect-h-5
+      tw-bg-gradient-to-b tw-from-[#8FA598] tw-to-bgd-dimmed dark:tw-bg-to-dimmed-dark">
+    </div>
+  </div>
+
+  <div class="tw-scope tw-text-t-medium-light dark:tw-text-t-medium-dark tw-select-none view-container tw-px-4 tw-pt-6">
+
+<div class="tw-space-y-4">
+  <section>
+    <div
+      class="share-info"
+      data-share-title="黑板报 - 第4期"
+      data-share-description="适合一次性投入的长钱策略，根据市场情况配置适合当下的投资品种"
+      data-share-event-label="hbb"
+    ></div>
+
+    <h1 class="
+      tw-mb-0.5
+      tw-text-20 tw-leading-normal tw-font-medium
+      tw-text-white">
+黑板报 - 第4期
+    </h1>
+    <p class="
+      tw-text-14 tw-leading-normal
+      tw-text-white
+      ">
+2021年9月7日成立，已运行 37 天
+    </p>
+  </section>
+
+  <section class="tw-rounded-2 tw-overflow-hidden tw-bg-bgd-light dark:tw-bg-bgd-dark tw-py-0 tw-pt-6">
+    <dl class="
+      tw-px-4
+      tw-mb-5
+      tw-flex
+      tw-text-12 tw-leading-none
+      ">
+      <div class="tw-w-1/2">
+        <dt class="
+          tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60
+          tw-mb-2">
+          年化收益率
+        </dt>
+        <dd class="
+          tw-text-20 tw-leading-normal
+          tw-font-num tw-font-bold
+          ">
+
+            <span class="tw-text-t-muted-light dark:tw-text-t-muted-dark">
+              满 1 年展示
+            </span>
+
+        </dd>
+      </div>
+
+      <div class="tw-w-1/2">
+        <dt class="
+          tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60
+          tw-mb-2">
+          日涨跌幅
+        </dt>
+        <dd class="
+          tw-text-20 tw-leading-normal
+          tw-font-num tw-font-bold">
+
+
+
+<span class="tw-text-green-light">-0.08%</span>
+
+        </dd>
+      </div>
+    </dl>
+
+  </section>
+
+    <section class="tw-rounded-2 tw-overflow-hidden tw-bg-bgd-light dark:tw-bg-bgd-dark tw-p-4 tw-pb-2.5">
+      <header class="tw-flex tw-justify-between tw-items-center tw-mb-4">
+        <h2 class="tw-text-16 tw-leading-normal tw-font-medium tw-text-t-normal-light dark:tw-text-t-normal-dark">
+          最近调仓
+        </h2>
+        <a
+          href="/stages/HBB_4/history"
+          class="tw-text-14 tw-text-t-light-light dark:tw-text-t-light-dark
+          tw-flex tw-items-center
+          ">
+          查看历史
+<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 tw-ml-1 tw-h-3 tw-w-auto tw-text-t-muted-light dark:tw-text-t-muted-dark" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </header>
+<aside class="
+  tw-bg-primary-light tw-bg-opacity-10
+  tw-px-3 tw-py-2.5 tw-mb-2.5
+  tw-rounded
+  ">
+  <p class="
+    tw-text-12 tw-leading-normal tw-text-t-medium-light dark:tw-text-t-medium-dark
+    tw-text-justify
+    ">
+
+2021年10月13日，当前全市场温度是21°，发车买入一份中证红利，一份中证500
+
+  </p>
+</aside>
+
+<table>
+  <tbody class="
+tw-text-t-normal-light dark:tw-text-t-normal-dark
+    tw-text-14
+    tw-leading-normal
+    ">
+
+
+        <tr>
+          <td class="tw-w-full tw-py-1.5">
+            <div>大成中证红利A</div>
+
+<div class="tw-flex tw-items-center">
+  <div
+    class="
+    tw-text-10 tw-leading-normal
+    tw-px-1 tw-py-0.25
+    tw-rounded-sm
+    tw-mr-1"
+    style="
+    background-color: rgba(234, 118, 118, 0.1);
+    color: #ea7676;
+    ">
+股票型
+  </div>
+  <div class="
+    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-font-num tw-font-bold
+    ">
+090010
+  </div>
+</div>
+
+          </td>
+          <td class="
+            tw-w-full tw-py-1.5
+            tw-text-right tw-align-top
+            tw-font-medium tw-leading-normal
+            tw-whitespace-nowrap
+tw-text-primary-light dark:tw-text-primary-dark
+            ">
+            买入 1 份
+          </td>
+        </tr>
+
+        <tr>
+          <td class="tw-w-full tw-py-1.5">
+            <div>500ETF联接LOF</div>
+
+<div class="tw-flex tw-items-center">
+  <div
+    class="
+    tw-text-10 tw-leading-normal
+    tw-px-1 tw-py-0.25
+    tw-rounded-sm
+    tw-mr-1"
+    style="
+    background-color: rgba(234, 118, 118, 0.1);
+    color: #ea7676;
+    ">
+股票型
+  </div>
+  <div class="
+    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-font-num tw-font-bold
+    ">
+160119
+  </div>
+</div>
+
+          </td>
+          <td class="
+            tw-w-full tw-py-1.5
+            tw-text-right tw-align-top
+            tw-font-medium tw-leading-normal
+            tw-whitespace-nowrap
+tw-text-primary-light dark:tw-text-primary-dark
+            ">
+            买入 1 份
+          </td>
+        </tr>
+
+
+        <tr>
+          <td class="tw-w-full tw-py-1.5">
+            <div>长城收益宝A</div>
+
+<div class="tw-flex tw-items-center">
+  <div
+    class="
+    tw-text-10 tw-leading-normal
+    tw-px-1 tw-py-0.25
+    tw-rounded-sm
+    tw-mr-1"
+    style="
+    background-color: rgba(241, 160, 84, 0.1);
+    color: #f1a054;
+    ">
+货币型
+  </div>
+  <div class="
+    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-font-num tw-font-bold
+    ">
+004972
+  </div>
+</div>
+
+          </td>
+          <td class="
+            tw-w-full tw-py-1.5
+            tw-text-right tw-align-top
+            tw-font-medium tw-leading-normal
+            tw-whitespace-nowrap
+tw-text-red-light dark:tw-text-red-dark
+            ">
+            卖出 2 份
+          </td>
+        </tr>
+
+
+  </tbody>
+</table>
+
+    </section>
+
+
+    <section class="tw-rounded-2 tw-overflow-hidden tw-bg-bgd-light dark:tw-bg-bgd-dark tw-p-4 tw-pb-2.5">
+      <header class="tw-flex tw-justify-between tw-items-center tw-mb-4">
+        <h2 class="
+          tw-text-16 tw-leading-normal tw-font-medium tw-text-t-normal-light dark:tw-text-t-normal-dark"
+          data-toggle="modal"
+          data-target="#batchMoneyTerm"
+          data-event-category="help"
+          data-event-label="#batchMoneyTerm">
+          新钱买入
+        </h2>
+      </header>
+      <table>
+        <thead>
+          <tr>
+            <th class="
+              tw-tw-full
+              tw-text-12 tw-font-medium tw-text-t-light-light dark:tw-text-t-light-dark
+              tw-pb-1.5">
+              基金名称</th>
+            <th class="
+              tw-whitespace-nowrap
+              tw-text-right
+              tw-text-12 tw-font-medium tw-text-t-light-light dark:tw-text-t-light-dark
+              tw-pb-1.5">
+              买入份数</th>
+          </tr>
+        </thead>
+        <tbody class="
+tw-text-t-normal-light dark:tw-text-t-normal-dark
+          tw-text-14
+          tw-leading-normal
+          ">
+
+            <tr>
+              <td class="tw-w-full tw-py-1.5">
+                <div>大成中证红利A</div>
+
+<div class="tw-flex tw-items-center">
+  <div
+    class="
+    tw-text-10 tw-leading-normal
+    tw-px-1 tw-py-0.25
+    tw-rounded-sm
+    tw-mr-1"
+    style="
+    background-color: rgba(234, 118, 118, 0.1);
+    color: #ea7676;
+    ">
+股票型
+  </div>
+  <div class="
+    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-font-num tw-font-bold
+    ">
+090010
+  </div>
+</div>
+
+              </td>
+              <td class="
+                tw-w-full tw-py-1.5
+                tw-align-top
+                tw-text-right tw-leading-normal
+                ">
+18 份
+              </td>
+            </tr>
+
+            <tr>
+              <td class="tw-w-full tw-py-1.5">
+                <div>广发中证养老产业A</div>
+
+<div class="tw-flex tw-items-center">
+  <div
+    class="
+    tw-text-10 tw-leading-normal
+    tw-px-1 tw-py-0.25
+    tw-rounded-sm
+    tw-mr-1"
+    style="
+    background-color: rgba(234, 118, 118, 0.1);
+    color: #ea7676;
+    ">
+股票型
+  </div>
+  <div class="
+    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-font-num tw-font-bold
+    ">
+000968
+  </div>
+</div>
+
+              </td>
+              <td class="
+                tw-w-full tw-py-1.5
+                tw-align-top
+                tw-text-right tw-leading-normal
+                ">
+17 份
+              </td>
+            </tr>
+
+            <tr>
+              <td class="tw-w-full tw-py-1.5">
+                <div>500ETF联接LOF</div>
+
+<div class="tw-flex tw-items-center">
+  <div
+    class="
+    tw-text-10 tw-leading-normal
+    tw-px-1 tw-py-0.25
+    tw-rounded-sm
+    tw-mr-1"
+    style="
+    background-color: rgba(234, 118, 118, 0.1);
+    color: #ea7676;
+    ">
+股票型
+  </div>
+  <div class="
+    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-font-num tw-font-bold
+    ">
+160119
+  </div>
+</div>
+
+              </td>
+              <td class="
+                tw-w-full tw-py-1.5
+                tw-align-top
+                tw-text-right tw-leading-normal
+                ">
+15 份
+              </td>
+            </tr>
+
+            <tr>
+              <td class="tw-w-full tw-py-1.5">
+                <div>鹏华安盈宝</div>
+
+<div class="tw-flex tw-items-center">
+  <div
+    class="
+    tw-text-10 tw-leading-normal
+    tw-px-1 tw-py-0.25
+    tw-rounded-sm
+    tw-mr-1"
+    style="
+    background-color: rgba(241, 160, 84, 0.1);
+    color: #f1a054;
+    ">
+货币型
+  </div>
+  <div class="
+    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-font-num tw-font-bold
+    ">
+000905
+  </div>
+</div>
+
+              </td>
+              <td class="
+                tw-w-full tw-py-1.5
+                tw-align-top
+                tw-text-right tw-leading-normal
+                ">
+28 份
+              </td>
+            </tr>
+
+            <tr>
+              <td class="tw-w-full tw-py-1.5">
+                <div>长城收益宝A</div>
+
+<div class="tw-flex tw-items-center">
+  <div
+    class="
+    tw-text-10 tw-leading-normal
+    tw-px-1 tw-py-0.25
+    tw-rounded-sm
+    tw-mr-1"
+    style="
+    background-color: rgba(241, 160, 84, 0.1);
+    color: #f1a054;
+    ">
+货币型
+  </div>
+  <div class="
+    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-font-num tw-font-bold
+    ">
+004972
+  </div>
+</div>
+
+              </td>
+              <td class="
+                tw-w-full tw-py-1.5
+                tw-align-top
+                tw-text-right tw-leading-normal
+                ">
+22 份
+              </td>
+            </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+
+  <section class="tw-rounded-2 tw-overflow-hidden tw-bg-bgd-light dark:tw-bg-bgd-dark tw-px-4 tw-py-6">
+    <header class="tw-mb-4">
+      <h2 class="
+        tw-mb-0.5
+        tw-text-16 tw-leading-normal tw-font-medium tw-text-t-normal-light dark:tw-text-t-normal-dark
+        ">
+        历史业绩
+      </h2>
+      <p class="
+        tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+        ">
+        最新数据：2021年10月14日
+      </p>
+    </header>
+    <dl class="tw-flex tw-flex-wrap">
+      <div class="tw-w-2/5 tw-mb-3">
+        <dt class="tw-text-12 tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60">
+          年化收益率
+        </dt>
+        <dd class="
+          tw-font-num tw-font-bold
+          tw-text-14 tw-leading-normal
+          ">
+
+
+
+<span class="tw-text-t-normal-light dark:tw-text-t-normal-dark">--</span>
+
+        </dd>
+      </div>
+      <div class="tw-w-3/10 tw-mb-3">
+        <dt class="tw-text-12 tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60">
+          净值
+        </dt>
+        <dd class="
+          tw-font-num tw-font-bold
+          tw-text-14 tw-leading-normal tw-text-t-normal-light dark:tw-text-t-normal-dark
+          ">
+0.9769
+        </dd>
+      </div>
+      <div class="tw-w-3/10 tw-mb-3">
+        <dt class="
+          tw-text-12 tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60
+          tw-text-right
+          ">
+          累计收益率
+        </dt>
+        <dd class="
+          tw-font-num tw-font-bold
+          tw-text-14 tw-leading-normal
+          tw-text-right
+          ">
+
+
+
+<span class="tw-text-green-light">-2.31%</span>
+
+        </dd>
+      </div>
+      <div class="tw-w-2/5">
+        <dt class="tw-text-12 tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60">
+          最大回撤
+        </dt>
+        <dd class="
+          tw-font-num tw-font-bold
+          tw-text-14 tw-leading-normal tw-text-t-normal-light dark:tw-text-t-normal-dark
+          ">
+3.00%
+        </dd>
+      </div>
+      <div class="tw-w-3/10">
+        <dt class="tw-text-12 tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60">
+          年化波动率
+        </dt>
+        <dd class="
+          tw-font-num tw-font-bold
+          tw-text-14 tw-leading-normal tw-text-t-normal-light dark:tw-text-t-normal-dark
+          ">
+--
+        </dd>
+      </div>
+      <div class="tw-w-3/10">
+        <dt class="
+          tw-text-12 tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60
+          tw-text-right
+          ">
+          夏普比率
+        </dt>
+        <dd class="
+          tw-font-num tw-font-bold
+          tw-text-14 tw-leading-normal tw-text-t-normal-light dark:tw-text-t-normal-dark
+          tw-text-right
+          ">
+--
+        </dd>
+      </div>
+    </dl>
+
+    <div class="tw-mt-2">
+<div
+  x-data="{ chart: null ,currentTab: 'Infinity' }"
+  x-init="chart = window.Charts.createChartStageMetrics($refs.canvas)"
+  x-on:switch-tab="chart.switchTab($event.detail.month)"
+>
+  <div class="tw-aspect-w-16 tw-aspect-h-12 tw-select-none">
+    <canvas
+      x-ref="canvas"
+      data-stage-metrics="[{&quot;acc_return&quot;:0.0,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-09-08&quot;,&quot;max_drawdown&quot;:null,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:1.0,&quot;rate&quot;:null,&quot;return_day&quot;:null,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:0.002895,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-09-09&quot;,&quot;max_drawdown&quot;:0.0,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:1.0028951597,&quot;rate&quot;:null,&quot;return_day&quot;:0.0028951597,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:2.83e-4,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-09-10&quot;,&quot;max_drawdown&quot;:0.002605,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:1.000282745,&quot;rate&quot;:null,&quot;return_day&quot;:-0.0026048732,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:0.003254,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-09-13&quot;,&quot;max_drawdown&quot;:0.002605,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:1.0032539674,&quot;rate&quot;:null,&quot;return_day&quot;:0.0029703825,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.002427,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-09-14&quot;,&quot;max_drawdown&quot;:0.005662,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.997573218,&quot;rate&quot;:null,&quot;return_day&quot;:-0.0056623244,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.002963,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-09-15&quot;,&quot;max_drawdown&quot;:0.006196,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.9970373136,&quot;rate&quot;:null,&quot;return_day&quot;:-5.372081e-4,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.00884,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-09-16&quot;,&quot;max_drawdown&quot;:0.012055,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.9911596181,&quot;rate&quot;:null,&quot;return_day&quot;:-0.005895161,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.010265,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-09-17&quot;,&quot;max_drawdown&quot;:0.013475,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.9897351896,&quot;rate&quot;:null,&quot;return_day&quot;:-0.0014371333,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.008636,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-09-22&quot;,&quot;max_drawdown&quot;:0.013475,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.9913640959,&quot;rate&quot;:null,&quot;return_day&quot;:0.0016458001,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.00621,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-09-23&quot;,&quot;max_drawdown&quot;:0.013475,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.9937903043,&quot;rate&quot;:null,&quot;return_day&quot;:0.0024473434,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.01163,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-09-24&quot;,&quot;max_drawdown&quot;:0.014835,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.9883703155,&quot;rate&quot;:null,&quot;return_day&quot;:-0.0054538556,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.018453,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-09-27&quot;,&quot;max_drawdown&quot;:0.021637,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.9815469812,&quot;rate&quot;:null,&quot;return_day&quot;:-0.0069036212,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.016856,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-09-28&quot;,&quot;max_drawdown&quot;:0.021637,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.9831437291,&quot;rate&quot;:null,&quot;return_day&quot;:0.0016267667,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.026818,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-09-29&quot;,&quot;max_drawdown&quot;:0.029975,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.9731818651,&quot;rate&quot;:null,&quot;return_day&quot;:-0.0101326629,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.021397,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-09-30&quot;,&quot;max_drawdown&quot;:0.029975,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.9786034815,&quot;rate&quot;:null,&quot;return_day&quot;:0.0055710208,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.018772,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-10-08&quot;,&quot;max_drawdown&quot;:0.029975,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.9812277278,&quot;rate&quot;:null,&quot;return_day&quot;:0.0026816237,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.017785,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-10-11&quot;,&quot;max_drawdown&quot;:0.029975,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.9822147221,&quot;rate&quot;:null,&quot;return_day&quot;:0.0010058769,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.023819,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-10-12&quot;,&quot;max_drawdown&quot;:0.029975,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.9761810054,&quot;rate&quot;:null,&quot;return_day&quot;:-0.0061429711,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.02235,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-10-13&quot;,&quot;max_drawdown&quot;:0.029975,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.9776502437,&quot;rate&quot;:null,&quot;return_day&quot;:0.001505088,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null},{&quot;acc_return&quot;:-0.02311,&quot;cagr&quot;:null,&quot;date&quot;:&quot;2021-10-14&quot;,&quot;max_drawdown&quot;:0.029975,&quot;name&quot;:&quot;黑板报 - 第4期&quot;,&quot;nav&quot;:0.9768904856,&quot;rate&quot;:null,&quot;return_day&quot;:-7.771267e-4,&quot;return_half_year&quot;:null,&quot;return_month&quot;:null,&quot;return_quarter&quot;:null,&quot;return_this_year&quot;:null,&quot;return_week&quot;:null,&quot;return_year&quot;:null,&quot;sharpe_ratio&quot;:null,&quot;stage_code&quot;:&quot;HBB_4&quot;,&quot;volatility&quot;:null}]"
+      data-index-prices="[{&quot;close&quot;:4972.1324,&quot;date&quot;:&quot;2021-09-08&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4970.0133,&quot;date&quot;:&quot;2021-09-09&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:5013.5219,&quot;date&quot;:&quot;2021-09-10&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4991.6598,&quot;date&quot;:&quot;2021-09-13&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4917.1617,&quot;date&quot;:&quot;2021-09-14&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4867.3187,&quot;date&quot;:&quot;2021-09-15&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4807.6978,&quot;date&quot;:&quot;2021-09-16&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4855.9402,&quot;date&quot;:&quot;2021-09-17&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4821.7675,&quot;date&quot;:&quot;2021-09-22&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4853.1957,&quot;date&quot;:&quot;2021-09-23&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4849.4277,&quot;date&quot;:&quot;2021-09-24&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4877.3698,&quot;date&quot;:&quot;2021-09-27&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4883.828,&quot;date&quot;:&quot;2021-09-28&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4833.9281,&quot;date&quot;:&quot;2021-09-29&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4866.3826,&quot;date&quot;:&quot;2021-09-30&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4929.9409,&quot;date&quot;:&quot;2021-10-08&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4936.1918,&quot;date&quot;:&quot;2021-10-11&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4883.8369,&quot;date&quot;:&quot;2021-10-12&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4940.1089,&quot;date&quot;:&quot;2021-10-13&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null},{&quot;close&quot;:4913.6123,&quot;date&quot;:&quot;2021-10-14&quot;,&quot;name&quot;:&quot;沪深300&quot;,&quot;rate&quot;:null}]"
+    ></canvas>
+  </div>
+
+  <ul class="nav nav-fill nav-btn tw-m-0 tw-mt-4">
+
+      <li class="nav-item">
+        <a
+          class="nav-link tw-px-0"
+          x-bind:class="{ active: currentTab == '1' }"
+          x-on:click.prevent="
+            currentTab = '1'
+            $dispatch('switch-tab', { month: '1' })
+          "
+          data-event-category="stage"
+          data-event-label="nav"
+          data-event-params="month: 1, stage_code: HBB_4">
+近一月
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          class="nav-link tw-px-0"
+          x-bind:class="{ active: currentTab == '3' }"
+          x-on:click.prevent="
+            currentTab = '3'
+            $dispatch('switch-tab', { month: '3' })
+          "
+          data-event-category="stage"
+          data-event-label="nav"
+          data-event-params="month: 3, stage_code: HBB_4">
+近三月
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          class="nav-link tw-px-0"
+          x-bind:class="{ active: currentTab == '6' }"
+          x-on:click.prevent="
+            currentTab = '6'
+            $dispatch('switch-tab', { month: '6' })
+          "
+          data-event-category="stage"
+          data-event-label="nav"
+          data-event-params="month: 6, stage_code: HBB_4">
+近半年
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          class="nav-link tw-px-0"
+          x-bind:class="{ active: currentTab == '12' }"
+          x-on:click.prevent="
+            currentTab = '12'
+            $dispatch('switch-tab', { month: '12' })
+          "
+          data-event-category="stage"
+          data-event-label="nav"
+          data-event-params="month: 12, stage_code: HBB_4">
+近一年
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          class="nav-link tw-px-0"
+          x-bind:class="{ active: currentTab == 'Infinity' }"
+          x-on:click.prevent="
+            currentTab = 'Infinity'
+            $dispatch('switch-tab', { month: 'Infinity' })
+          "
+          data-event-category="stage"
+          data-event-label="nav"
+          data-event-params="month: Infinity, stage_code: HBB_4">
+成立以来
+        </a>
+      </li>
+
+  </ul>
+</div>
+
+    </div>
+  </section>
+
+
+  <section class="tw-rounded-2 tw-overflow-hidden tw-bg-bgd-light dark:tw-bg-bgd-dark tw-px-4 tw-py-6">
+    <header class="tw-mb-4">
+      <h2 class="tw-text-16 tw-leading-normal tw-font-medium tw-text-t-normal-light dark:tw-text-t-normal-dark">
+        组合成分
+      </h2>
+      <p class="
+        tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+        ">
+        最新数据：2021年10月14日
+      </p>
+    </header>
+
+    <div class="tw-mb-4 tw-flex">
+      <div
+        class="tw-w-1/2"
+        x-data
+        x-init="window.Charts.createChartStageComposition($refs.canvas)"
+      >
+        <div class="tw-aspect-w-1 tw-aspect-h-1 tw-select-none">
+          <canvas
+            x-ref="canvas"
+            data-json="[{&quot;name&quot;:&quot;股票型&quot;,&quot;percent&quot;:&quot;0.4871&quot;},{&quot;name&quot;:&quot;货币型&quot;,&quot;percent&quot;:&quot;0.5129&quot;}]"
+          ></canvas>
+        </div>
+      </div>
+      <div class="tw-w-1/2 tw-flex tw-justify-center">
+        <ul class="tw-flex-shrink-0
+          tw-flex tw-flex-col tw-justify-center
+          tw-text-14 tw-leading-normal tw-text-t-normal-light dark:tw-text-t-normal-dark
+          tw-space-y-3
+          ">
+
+
+            <li class="tw-flex tw-items-center">
+              <div
+                class="tw-block tw-w-2 tw-h-2 tw-mr-2"
+                style="background-color: #ea7676"
+              ></div>
+              <span class="tw-mr-3">股票型</span>
+              <span class="tw-font-semibold">48.71%</span>
+            </li>
+
+
+            <li class="tw-flex tw-items-center">
+              <div
+                class="tw-block tw-w-2 tw-h-2 tw-mr-2"
+                style="background-color: #f1a054"
+              ></div>
+              <span class="tw-mr-3">货币型</span>
+              <span class="tw-font-semibold">51.29%</span>
+            </li>
+
+        </ul>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th class="
+            tw-whitespace-nowrap
+            tw-tw-full
+            tw-text-12 tw-font-medium tw-text-t-light-light dark:tw-text-t-light-dark
+            tw-pb-1.5">
+            基金名称
+          </th>
+          <th class="
+            tw-whitespace-nowrap
+            tw-text-right
+            tw-text-12 tw-font-medium tw-text-t-light-light dark:tw-text-t-light-dark
+            tw-pl-6
+            tw-pb-1.5">
+            份数
+          </th>
+          <th class="
+            tw-whitespace-nowrap
+            tw-text-right
+            tw-text-12 tw-font-medium tw-text-t-light-light dark:tw-text-t-light-dark
+            tw-pl-6
+            tw-pb-1.5">
+            持仓占比
+          </th>
+        </tr>
+      </thead>
+      <tbody class="
+tw-text-t-normal-light dark:tw-text-t-normal-dark
+        tw-text-14
+        tw-leading-normal
+        ">
+
+          <tr>
+            <td class="tw-w-full tw-py-1.5">
+              <div>广发中证养老产业A</div>
+
+<div class="tw-flex tw-items-center">
+  <div
+    class="
+    tw-text-10 tw-leading-normal
+    tw-px-1 tw-py-0.25
+    tw-rounded-sm
+    tw-mr-1"
+    style="
+    background-color: rgba(234, 118, 118, 0.1);
+    color: #ea7676;
+    ">
+股票型
+  </div>
+  <div class="
+    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-font-num tw-font-bold
+    ">
+000968
+  </div>
+</div>
+
+            </td>
+            <td class="
+              tw-w-full tw-py-1.5
+              tw-align-top
+              tw-text-right tw-leading-normal
+              ">
+17 份
+            </td>
+            <td class="
+              tw-w-full tw-py-1.5
+              tw-align-top
+              tw-text-right tw-leading-normal
+              tw-font-medium
+              ">
+17.30%
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tw-w-full tw-py-1.5">
+              <div>大成中证红利A</div>
+
+<div class="tw-flex tw-items-center">
+  <div
+    class="
+    tw-text-10 tw-leading-normal
+    tw-px-1 tw-py-0.25
+    tw-rounded-sm
+    tw-mr-1"
+    style="
+    background-color: rgba(234, 118, 118, 0.1);
+    color: #ea7676;
+    ">
+股票型
+  </div>
+  <div class="
+    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-font-num tw-font-bold
+    ">
+090010
+  </div>
+</div>
+
+            </td>
+            <td class="
+              tw-w-full tw-py-1.5
+              tw-align-top
+              tw-text-right tw-leading-normal
+              ">
+18 份
+            </td>
+            <td class="
+              tw-w-full tw-py-1.5
+              tw-align-top
+              tw-text-right tw-leading-normal
+              tw-font-medium
+              ">
+17.07%
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tw-w-full tw-py-1.5">
+              <div>500ETF联接LOF</div>
+
+<div class="tw-flex tw-items-center">
+  <div
+    class="
+    tw-text-10 tw-leading-normal
+    tw-px-1 tw-py-0.25
+    tw-rounded-sm
+    tw-mr-1"
+    style="
+    background-color: rgba(234, 118, 118, 0.1);
+    color: #ea7676;
+    ">
+股票型
+  </div>
+  <div class="
+    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-font-num tw-font-bold
+    ">
+160119
+  </div>
+</div>
+
+            </td>
+            <td class="
+              tw-w-full tw-py-1.5
+              tw-align-top
+              tw-text-right tw-leading-normal
+              ">
+15 份
+            </td>
+            <td class="
+              tw-w-full tw-py-1.5
+              tw-align-top
+              tw-text-right tw-leading-normal
+              tw-font-medium
+              ">
+14.34%
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tw-w-full tw-py-1.5">
+              <div>鹏华安盈宝</div>
+
+<div class="tw-flex tw-items-center">
+  <div
+    class="
+    tw-text-10 tw-leading-normal
+    tw-px-1 tw-py-0.25
+    tw-rounded-sm
+    tw-mr-1"
+    style="
+    background-color: rgba(241, 160, 84, 0.1);
+    color: #f1a054;
+    ">
+货币型
+  </div>
+  <div class="
+    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-font-num tw-font-bold
+    ">
+000905
+  </div>
+</div>
+
+            </td>
+            <td class="
+              tw-w-full tw-py-1.5
+              tw-align-top
+              tw-text-right tw-leading-normal
+              ">
+28 份
+            </td>
+            <td class="
+              tw-w-full tw-py-1.5
+              tw-align-top
+              tw-text-right tw-leading-normal
+              tw-font-medium
+              ">
+28.72%
+            </td>
+          </tr>
+
+          <tr>
+            <td class="tw-w-full tw-py-1.5">
+              <div>长城收益宝A</div>
+
+<div class="tw-flex tw-items-center">
+  <div
+    class="
+    tw-text-10 tw-leading-normal
+    tw-px-1 tw-py-0.25
+    tw-rounded-sm
+    tw-mr-1"
+    style="
+    background-color: rgba(241, 160, 84, 0.1);
+    color: #f1a054;
+    ">
+货币型
+  </div>
+  <div class="
+    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-font-num tw-font-bold
+    ">
+004972
+  </div>
+</div>
+
+            </td>
+            <td class="
+              tw-w-full tw-py-1.5
+              tw-align-top
+              tw-text-right tw-leading-normal
+              ">
+22 份
+            </td>
+            <td class="
+              tw-w-full tw-py-1.5
+              tw-align-top
+              tw-text-right tw-leading-normal
+              tw-font-medium
+              ">
+22.57%
+            </td>
+          </tr>
+
+      </tbody>
+    </table>
+  </section>
+
+<div
+  class="modal fade"
+  id="batchMoneyTerm"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="新钱买入"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">新钱买入</h4>
+      </div>
+      <div class="modal-body">新钱指的是你新攒的一笔可用于5年以上长期投资的闲钱。</div>
+      <div class="modal-footer">
+        <a type="button" class="btn tw-text-primary-light dark:tw-text-primary-dark" data-dismiss="modal">知道了</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+    <aside class="tw-pt-8 tw-pb-10">
+      <p class="tw-text-t-muted-light dark:tw-text-t-muted-dark tw-text-12 tw-leading-normal tw-text-center">
+        过往业绩不预示未来表现<br>市场有风险，投资需谨慎
+      </p>
+    </aside>
+  </div>
+
+    </div>
+
+<div
+  id="sharedModalConfirm"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <img src="/images/download_bg.svg" />
+      <div class="d-modal-body">
+        <h3>温馨提示</h3>
+        <p>下载 App ，查看更多精彩内容</p>
+      </div>
+      <div class="d-modal-footer">
+        <button type="button" class="btn btn-confirm btn-primary">
+          立即下载
+        </button>
+        <button type="button" class="btn btn-cancel" data-dismiss="modal">
+          取消
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div
+  id="sharedModalAlert"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <img src="/images/download_bg.svg" />
+      <div class="d-modal-body">
+        <h3>温馨提示</h3>
+        <p>下载 App ，查看更多精彩内容</p>
+      </div>
+      <div class="d-modal-footer">
+        <button type="button" class="btn btn-confirm btn-primary" data-dismiss="modal">
+          知道了
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
