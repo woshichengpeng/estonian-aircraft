@@ -1,12 +1,10 @@
 name: Flat
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
   schedule:
     - cron: '0 8,12 * * *'
+    - cron: '0 6,10 * * tue'
 
 jobs:
   scheduled:
