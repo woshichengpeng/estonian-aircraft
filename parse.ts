@@ -70,12 +70,14 @@ interface IOrder {
 
   await Deno.writeTextFile("./data.json", JSON.stringify(result, null, 2));
   const sendKey = Deno.env.get("SEND_KEY");
-  var sendConent = "";
+  var sendContent = "";
   for (const stock of stocks) {
-    sendConent += `${stock.name}[${stock.id}][${stock.type}]: ${stock.order}\n`;
+    sendContent +=
+      `${stock.name}[${stock.id}][${stock.type}]: ${stock.order}\n`;
   }
+  console.log(sendContent);
   const sendUrl = encodeURI(
-    `https://sctapi.ftqq.com/${sendKey}.send?title=MONEY&desp=${sendConent}`,
+    `https://sctapi.ftqq.com/${sendKey}.send?title=MONEY&desp=${sendContent}`,
   );
   await fetch(sendUrl);
 })();
