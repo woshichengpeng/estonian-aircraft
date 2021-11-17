@@ -1,6 +1,6 @@
 # hbb-moniter
 
-监控有知有行第四期黑板报发车信息。
+使用 GitHub Action 和 Server 酱监控黑板报发车信息并推送给微信。
 (理论上改变 .github/workflows/report.yml 中 http_url 的信息也可以监控其它期黑板报)
 
 ## 说明
