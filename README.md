@@ -12,8 +12,8 @@
 0. 首先需要在[Server酱](https://sct.ftqq.com/)中申请 sendKey，用于给微信的消息推送。
 1. 将本项目 Fork 到自己的仓库。
 2. 打开自己 Fork 之后的仓库，因为没有 sendKey 信息，此时若触发监控，一定会失败。
-3. 进入 Settings 选项，点击 Secret，并选择 New Repository Secret。填写以下变量：\n
-  `SENDKEY`: <server 酱的 sendkey>
+3. 进入 Settings 选项，点击 Secret，并选择 New Repository Secret。填写以下变量：<br />
+  `SENDKEY`: <server 酱的 sendkey> <br />
   添加后展示如下：
   ![image](https://user-images.githubusercontent.com/49070692/142156233-861e5f37-dde1-499b-8916-702da857c7b4.png)
 4. 回到 Action 选项卡，重新运行 Action，或者静待定时任务执行。
