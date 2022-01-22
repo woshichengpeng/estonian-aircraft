@@ -24,7 +24,7 @@ interface IOrder {
   )[0] as Node;
   // get the last updated date
   const orderContent =
-    (xpath.select('.//p[ contains( ., "温度" ) ]', section)[0] as Node)
+    (xpath.select('.//p[ contains( ., "份" ) ]', section)[0] as Node)
       .textContent!.trim();
 
   ensureFileSync("./data.json");
