@@ -81,9 +81,9 @@ var assetsRetryStatistics = window.assetsRetry({
 </script>
 
 <meta property="trace:endpoint" content="https://trace.youzhiyouxing.cn/_.png" />
-<meta property="trace:server-query" content="app_ver=&amp;build_ver=&amp;device_id=481340ed-540d-465c-a233-48df7d88043f&amp;mfr=&amp;model=&amp;os=&amp;os_ver=&amp;ua=axios%2F0.21.1&amp;user_id=-1" />
+<meta property="trace:server-query" content="app_ver=&amp;build_ver=&amp;device_id=f7f0ad97-a2b3-4f33-a8df-20dd53813209&amp;mfr=&amp;model=&amp;os=&amp;os_ver=&amp;ua=axios%2F0.21.1&amp;user_id=-1" />
 
-<meta content="IDNrIDVhI0UIFXgLYTsORwgQCREFMzBHsbXOt9Twax6e5A94NVpsajzs" name="csrf-token">
+<meta content="DQsHclozByAKLEQmSnNjAgQtdBAdJCki4qTC0kVuAV7m8C-iFN3b_wXZ" name="csrf-token">
 <meta name="baidu-site-verification" content="code-7SrEF8Kmvi" />
 
 
@@ -94,19 +94,11 @@ var assetsRetryStatistics = window.assetsRetry({
 
   <script crossorigin src="https://cdn.youzhiyouxing.cn/static/js/ng-auto-theme-44e32b1789fdc29e653d742358be9c42.js?vsn=d"></script>
 
-    <script crossorigin src="https://cdn.youzhiyouxing.cn/static/js/ng-critical-d11ae0b4beaf1fb74f8c4eca11666ae8.js?vsn=d"></script>
-
-    <link crossorigin rel="stylesheet" href="https://cdn.youzhiyouxing.cn/static/css/application-1e177e7397903e06b1d287cbe12276b8.css?vsn=d" />
-    <script defer crossorigin src="https://cdn.youzhiyouxing.cn/static/js/application-4e50d4a364a5ad985c27e7bcff42808f.js?vsn=d"></script>
-
-    <link crossorigin rel="stylesheet" href="https://cdn.youzhiyouxing.cn/static/css/ng-application-a2420b963156e49ea296606cf03461d7.css?vsn=d"/>
-    <script defer crossorigin src="https://cdn.youzhiyouxing.cn/static/js/ng-application-1a62398031574f0af80f0d364a67d51d.js?vsn=d"></script>
+    <script crossorigin src="https://cdn.youzhiyouxing.cn/static/js/ng-critical-129023e3fcc790ededb0fe29db391be6.js?vsn=d"></script>
+    <link crossorigin rel="stylesheet" href="https://cdn.youzhiyouxing.cn/static/css/ng-application-e90a734adbd6dd70c1790360f2788259.css?vsn=d"/>
+    <script defer crossorigin src="https://cdn.youzhiyouxing.cn/static/js/ng-application-536ef42c67c35b1f849d0749b1c66b30.js?vsn=d"></script>
 
     <script>
-      window._onWindowLoaded = [];
-      window.Hooks = {};
-      window.afterload = (fn) => window._onWindowLoaded.push(fn);
-
       window.yzyxContext.getShareInfo = function() {
         return {
           title: '有知有行', // 分享标题
@@ -122,113 +114,136 @@ var assetsRetryStatistics = window.assetsRetry({
         wx.config({
           debug: false, // 开启调试模式
           appId: 'wx8bf634ea361e53c3', // 必填，公众号的唯一标识
-          timestamp: 1655880285 , // 必填，生成签名的时间戳
-          nonceStr: 'gqNs4Uo-_vVdp0DR', // 必填，生成签名的随机串
-          signature: '4a111df09a10cd57c6dd32f1f8a667f6f3a02252', // 必填，签名
+          timestamp: 1655900640 , // 必填，生成签名的时间戳
+          nonceStr: 'ZVifyybrhC7DVdpt', // 必填，生成签名的随机串
+          signature: '9df3844d9142e3d0280ad8650d4abe7a45102ef8', // 必填，签名
           jsApiList: ['updateAppMessageShareData', 'updateTimelineShareData'], // 必填，需要使用的JS接口列表
           openTagList: ['wx-open-launch-app'] // 可选，需要使用的开放标签列表，例如['wx-open-launch-app']
         });
       }
     </script>
   </head>
-  <body class="tw-bg-bgd-page-1-light dark:tw-bg-bgd-page-1-dark
+  <body class="tw-bg-bgd-page-1
     tw-min-h-screen tw-flex
 ">
 
       <div class="tw-fixed tw-top-0 tw-z-40 tw-w-full tw-h-17 md:tw-h-12 app:tw-hidden">
-<header
-  class="tw-hidden browser:tw-block"
-  x-data="{ openMobileMenu: false }"
-  x-init="$watch('openMobileMenu', window.toggleBodyScroll)"
->
-  <div class="view-container">
-    <div class="logo-name md:tw-hidden"></div>
-    <ul class="tw-flex-1 nav tw-mx-6 tw-flex tw-justify-evenly md:tw-hidden">
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          href="/"
-        >首页</a>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          href="/materials"
-        >有知</a>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          href="/data"
-        >温度计</a>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link "
-          href="/join-us"
-        >加入我们</a>
-      </li>
-    </ul>
+<header class="tw-h-full tw-shadow-medium tw-hidden browser:tw-block tw-bg-bgd-page tw-text-t-normal">
+  <!-- for mobile browser -->
+  <div class="tw-h-full tw-hidden md:tw-block" x-data="{ openMobileMenu: false }" x-init="$watch('openMobileMenu', window.toggleBodyScroll)">
+    <div class="view-container tw-h-full tw-flex tw-justify-between tw-items-center">
+      <a class="tw-block tw-h-8 md:tw-h-6" href="/">
+  <img class="tw-block dark:tw-hidden tw-h-full" src="https://cdn.youzhiyouxing.cn/static/images/logo-name-90f18a7276e0bfab9a0a9c4c50a6e2d6.png?vsn=d">
+  <img class="tw-hidden dark:tw-block tw-h-full" src="https://cdn.youzhiyouxing.cn/static/images/logo-name-dark-b4743879d8e06ecfb41890dbc94ea78e.png?vsn=d">
+</a>
 
-      <div class="logo-name tw-hidden md:tw-block"></div>
+      <div class="tw-flex tw-items-center tw-space-x-6 md:tw-space-x-3">
+        <a class="btn btn-xs tw-flex" data-event-type="web_click" data-event-category="download" data-event-label="app" href="/download">
+          下载 App
+        </a>
 
-    <div class="tw-flex tw-space-x-6 md:tw-space-x-3">
-      <a class="button md md:tw-hidden"
-        href="/download"
-        data-event-type="web_click"
-        data-event-category="download"
-        data-event-label="app"
-      >下载 App</a>
-      <a class="button xs tw-hidden md:tw-flex"
-        data-event-type="web_click"
-        data-event-category="download"
-        data-event-label="app"
-        href="/download"
-      >
-下载 App
-      </a>
-      <button
-        class="tw-hidden md:tw-flex tw-outline-none tw-bg-transparent tw-border-none tw-text-t-normal-light dark:tw-text-t-normal-dark"
-        aria-controls="mobile-menu"
-        x-on:click="openMobileMenu = !openMobileMenu"
-        x-bind:aria-expanded="openMobileMenu.toString()"
-      >
-        <span class="tw-sr-only">打开移动端导航</span>
-        <svg class="tw-h-6 tw-w-6 tw-block" :class="{ 'tw-hidden': openMobileMenu, 'tw-block': !(openMobileMenu) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-        <svg class="tw-h-6 tw-w-6 tw-hidden" :class="{ 'tw-block': openMobileMenu, 'tw-hidden': !(openMobileMenu) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-
-        <a class="button md outline md:tw-hidden" onclick="traceEvent('web_click', 'login', 'page');" href="/user/login">登录 / 注册</a>
-
+        <button class="btn tw-flex tw-outline-none tw-bg-transparent tw-border-0 tw-text-t-normal" aria-controls="mobile-menu" x-on:click="openMobileMenu = !openMobileMenu" x-bind:aria-expanded="openMobileMenu.toString()">
+          <span class="tw-sr-only">打开移动端导航</span>
+          <svg class="tw-h-6 tw-w-6 tw-block" :class="{ 'tw-hidden': openMobileMenu, 'tw-block': !(openMobileMenu) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+            </path>
+          </svg>
+          <svg class="tw-h-6 tw-w-6 tw-hidden" :class="{ 'tw-block': openMobileMenu, 'tw-hidden': !(openMobileMenu) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+            </path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div x-description="移动端导航" x-cloak class="tw-bg-white tw-z-40 tw-h-0 tw-transition-all tw-overflow-hidden" x-bind:class="{ 'tw-h-screen': openMobileMenu, 'tw-h-0': !(openMobileMenu) }">
+      <ul class="tw-p-6 tw-list-none tw-text-center">
+        <li>
+          <a class="tw-block tw-p-4 tw-text-16 tw-text-t-normal tw-font-medium" href="/">
+            首页
+          </a>
+        </li>
+        <li>
+          <a class="tw-block tw-p-4 tw-text-16 tw-text-t-normal tw-font-medium" href="/join-us">
+            加入我们
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
-  <div
-    x-description="移动端导航"
-    x-cloak
-    class="tw-bg-white-light dark:tw-bg-white-dark tw-z-40 tw-h-0 tw-hidden md:tw-block tw-transition-all tw-overflow-hidden"
-    :class="{ 'tw-h-screen': openMobileMenu, 'tw-h-0': !(openMobileMenu) }"
-  >
-    <ul class="tw-p-6 tw-list-none tw-text-center">
-      <li>
-        <a
-          class="tw-block tw-p-4 tw-text-16 tw-text-t-normal-light dark:tw-text-t-normal-dark tw-font-medium"
-          href="/"
-        >首页</a>
-      </li>
-      <li>
-        <a
-          class="tw-block tw-p-4 tw-text-16 tw-text-t-normal-light dark:tw-text-t-normal-dark tw-font-medium"
-          href="/join-us"
-        >加入我们</a>
-      </li>
-    </ul>
+  <!-- for desktop browser -->
+  <div class="tw-h-full tw-block md:tw-hidden">
+    <div class="view-container tw-h-full tw-flex tw-justify-between tw-items-center">
+      <a class="tw-block tw-h-8 md:tw-h-6" href="/">
+  <img class="tw-block dark:tw-hidden tw-h-full" src="https://cdn.youzhiyouxing.cn/static/images/logo-name-90f18a7276e0bfab9a0a9c4c50a6e2d6.png?vsn=d">
+  <img class="tw-hidden dark:tw-block tw-h-full" src="https://cdn.youzhiyouxing.cn/static/images/logo-name-dark-b4743879d8e06ecfb41890dbc94ea78e.png?vsn=d">
+</a>
+
+      <ul class="tw-flex-1 tw-h-full tw-mx-6 tw-flex tw-justify-evenly">
+        <li>
+          <a class="tw-w-full tw-h-full tw-flex
+tw-justify-center tw-items-center
+tw-pt-3 tw-pb-2 tw-px-4
+tw-border-b-[3px]
+tw-border-solid
+tw-text-18
+tw-text-t-light
+tw-border-transparent
+" href="/">
+            首页
+          </a>
+        </li>
+        <li>
+          <a class="tw-w-full tw-h-full tw-flex
+tw-justify-center tw-items-center
+tw-pt-3 tw-pb-2 tw-px-4
+tw-border-b-[3px]
+tw-border-solid
+tw-text-18
+tw-text-t-light
+tw-border-transparent
+" href="/materials">
+            有知
+          </a>
+        </li>
+        <li>
+          <a class="tw-w-full tw-h-full tw-flex
+tw-justify-center tw-items-center
+tw-pt-3 tw-pb-2 tw-px-4
+tw-border-b-[3px]
+tw-border-solid
+tw-text-18
+tw-text-t-light
+tw-border-transparent
+" href="/data">温度计</a>
+        </li>
+        <li>
+          <a class="tw-w-full tw-h-full tw-flex
+tw-justify-center tw-items-center
+tw-pt-3 tw-pb-2 tw-px-4
+tw-border-b-[3px]
+tw-border-solid
+tw-text-18
+tw-text-t-light
+tw-border-transparent
+" href="/join-us">
+            加入我们
+          </a>
+        </li>
+      </ul>
+
+      <div class="tw-flex tw-items-center tw-space-x-6 md:tw-space-x-3">
+        <a class="btn btn-md" href="/download" data-event-type="web_click" data-event-category="download" data-event-label="app">
+          下载 App
+        </a>
+
+          <a class="btn btn-md btn-outline" onclick="traceEvent('web_click', 'login', 'page');" href="/user/login">
+            登录 / 注册
+          </a>
+
+      </div>
+    </div>
   </div>
 </header>
-
       </div>
 
     <div class="tw-relative tw-flex-1 tw-max-w-full
@@ -236,12 +251,12 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
 
   <div class="tw-absolute tw-z-[-1] tw-left-0 tw-top-0 tw-w-full">
     <div class="tw-aspect-w-7 tw-aspect-h-5
-      tw-bg-gradient-to-b tw-from-[#8FA598] tw-to-bgd-dimmed dark:tw-bg-to-dimmed-dark">
+      tw-bg-gradient-to-b tw-from-[#8FA598] tw-to-bgd-page-1">
     </div>
   </div>
 
-  <div class="tw-scope tw-text-t-medium-light dark:tw-text-t-medium-dark tw-select-none view-container tw-px-4 tw-pt-6">
-<div data-phx-main="true" data-phx-session="SFMyNTY.g2gDaAJhBXQAAAAIZAACaWRtAAAAFHBoeC1GdnJlV0xTeW81ZUQ0SlZCZAAMbGl2ZV9zZXNzaW9uaAJkAApzdHJhdGVnaWVzbggALcsrts379RZkAApwYXJlbnRfcGlkZAADbmlsZAAIcm9vdF9waWRkAANuaWxkAAlyb290X3ZpZXdkACJFbGl4aXIuRmxvdXJpc2hXZWIuU3RhZ2VMaXZlLkluZGV4ZAAGcm91dGVyZAAZRWxpeGlyLkZsb3VyaXNoV2ViLlJvdXRlcmQAB3Nlc3Npb250AAAAAGQABHZpZXdkACJFbGl4aXIuRmxvdXJpc2hXZWIuU3RhZ2VMaXZlLkluZGV4bgYARv4nioEBYgABUYA.WXqwXh-Ygpo_nSQt2VmwRtBjrbzrqQlBKL8PMMpZPF4" data-phx-static="SFMyNTY.g2gDaAJhBXQAAAADZAAKYXNzaWduX25ld2wAAAABZAAMY3VycmVudF91c2VyamQABWZsYXNodAAAAABkAAJpZG0AAAAUcGh4LUZ2cmVXTFN5bzVlRDRKVkJuBgBH_ieKgQFiAAFRgA.tAZBqHNcjQfXndY2oIu79iTSlYxzA8duHHcbDd4Tqhg" id="phx-FvreWLSyo5eD4JVB"><div class="tw-fixed tw-w-full">
+  <div class="tw-text-t-medium tw-select-none view-container tw-px-4 tw-pt-6">
+<div data-phx-main="true" data-phx-session="SFMyNTY.g2gDaAJhBXQAAAAIZAACaWRtAAAAFHBoeC1GdnJ3Ml9WT0lydVdFZzRpZAAMbGl2ZV9zZXNzaW9uaAJkAApzdHJhdGVnaWVzbggAMcVkQ5no-hZkAApwYXJlbnRfcGlkZAADbmlsZAAIcm9vdF9waWRkAANuaWxkAAlyb290X3ZpZXdkACJFbGl4aXIuRmxvdXJpc2hXZWIuU3RhZ2VMaXZlLkluZGV4ZAAGcm91dGVyZAAZRWxpeGlyLkZsb3VyaXNoV2ViLlJvdXRlcmQAB3Nlc3Npb250AAAAAGQABHZpZXdkACJFbGl4aXIuRmxvdXJpc2hXZWIuU3RhZ2VMaXZlLkluZGV4bgYAdZVei4EBYgABUYA.kaAGm5nsGYoR80Eibyxc48xCOyUQNQ-DcBSyvJdrn5E" data-phx-static="SFMyNTY.g2gDaAJhBXQAAAADZAAKYXNzaWduX25ld2wAAAABZAAMY3VycmVudF91c2VyamQABWZsYXNodAAAAABkAAJpZG0AAAAUcGh4LUZ2cncyX1ZPSXJ1V0VnNGluBgB1lV6LgQFiAAFRgA.Uk59Lt6RsCiQzN43B2rBY1wOlMyUYE8xGIIaiI0ROos" id="phx-Fvrw2_VOIruWEg4i"><div class="tw-fixed tw-w-full">
   <p class="alert alert-info" role="alert"
     phx-click="lv:clear-flash"
     phx-value-key="info"></p>
@@ -265,14 +280,14 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
         <p class="tw-text-14 tw-leading-normal
                   tw-text-white">
 2021年9月7日成立，已运行
-287 天
+288 天
         </p>
       </div>
 
         <div class="tw-py-4 tw--my-4" id="subscribe-HBB_4" phx-hook="StrategySubscriptionButton" data-action="subscribe" data-strategy-code="HBB" data-stage-code="HBB_4">
           <button class="
             tw-px-3 tw-py-1 tw-text-12 tw-leading-normal tw-font-medium
-            tw-text-primary-light dark:tw-text-primary-dark tw-bg-bgd-light dark:tw-bg-bgd-dark
+            tw-text-primary tw-bg-bgd-card
             tw-rounded-[19px]
             tw-appearence-none tw-outline-none
           ">
@@ -283,7 +298,7 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     </div>
   </section>
 
-  <section class="tw-rounded-2 tw-overflow-hidden tw-bg-bgd-card-light dark:tw-bg-bgd-card-dark tw-py-0 tw-pt-6">
+  <section class="tw-rounded-2 tw-overflow-hidden tw-bg-bgd-card tw-py-0 tw-pt-6">
     <dl class="
       tw-px-4
       tw-mb-5
@@ -292,7 +307,7 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
       ">
       <div class="tw-w-1/2">
         <dt class="
-          tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60
+          tw-font-normal tw-text-t-light/60
           tw-mb-2">
           年化收益率
         </dt>
@@ -301,7 +316,7 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
           tw-font-num tw-font-bold
           ">
 
-            <span class="tw-text-t-muted-light dark:tw-text-t-muted-dark">
+            <span class="tw-text-t-muted">
               满 1 年展示
             </span>
 
@@ -310,7 +325,7 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
 
       <div class="tw-w-1/2">
         <dt class="
-          tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60
+          tw-font-normal tw-text-t-light/60
           tw-mb-2">
           日涨跌幅
         </dt>
@@ -320,7 +335,7 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
 
 
 
-<span class="tw-text-green-light dark:tw-text-green-dark">-0.21%</span>
+<span class="tw-text-green">-0.21%</span>
 
         </dd>
       </div>
@@ -329,13 +344,13 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
       <aside class="
         tw-flex tw-items-center
         tw-px-4 tw-py-3
-        tw-text-orange-light dark:tw-text-orange-dark
-        tw-bg-orange-light tw-bg-opacity-10
+        tw-text-orange
+        tw-bg-orange/10
         tw-text-12 tw-leading-normal
         ">
 <svg class="tw-h-3 tw-w-auto tw-mr-1.5" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="6" cy="6" r="5.5" stroke="currentColor"></circle>
-  <path d="M5.99462 9.5C6.20997 9.5 6.38681 9.43172 6.54439 9.2934C6.68096 9.15683 6.75975 8.96948 6.75975 8.75413C6.75975 8.53877 6.68096 8.36193 6.54439 8.22536C6.39732 8.08879 6.21173 8.01876 5.99462 8.01876C5.77751 8.01876 5.60242 8.08704 5.46585 8.22536C5.30827 8.36193 5.23999 8.53877 5.23999 8.75413C5.23999 8.96948 5.30827 9.14632 5.46585 9.28289C5.60242 9.42121 5.77926 9.5 5.99462 9.5ZM6.43584 7.07329L6.63719 2.95873C6.64944 2.70835 6.44984 2.5 6.19947 2.5H5.79502C5.54464 2.5 5.34504 2.7101 5.3573 2.95873L5.55865 7.07329C5.57091 7.30615 5.76175 7.49 5.99637 7.49C6.23274 7.49 6.42533 7.30615 6.43584 7.07329Z" fill="currentColor"></path>
+  <circle cx="6" cy="6" r="5.5" stroke="currentColor"/>
+  <path d="M5.99462 9.5C6.20997 9.5 6.38681 9.43172 6.54439 9.2934C6.68096 9.15683 6.75975 8.96948 6.75975 8.75413C6.75975 8.53877 6.68096 8.36193 6.54439 8.22536C6.39732 8.08879 6.21173 8.01876 5.99462 8.01876C5.77751 8.01876 5.60242 8.08704 5.46585 8.22536C5.30827 8.36193 5.23999 8.53877 5.23999 8.75413C5.23999 8.96948 5.30827 9.14632 5.46585 9.28289C5.60242 9.42121 5.77926 9.5 5.99462 9.5ZM6.43584 7.07329L6.63719 2.95873C6.64944 2.70835 6.44984 2.5 6.19947 2.5H5.79502C5.54464 2.5 5.34504 2.7101 5.3573 2.95873L5.55865 7.07329C5.57091 7.30615 5.76175 7.49 5.99637 7.49C6.23274 7.49 6.42533 7.30615 6.43584 7.07329Z" fill="currentColor"/>
 </svg> 新钱不适合买入本期，去看看：
 <a class="tw-text-[#4287ce]" data-phx-link="redirect" data-phx-link-state="push" href="/stages/HBB_7">
 黑板报 - 第7期
@@ -344,27 +359,27 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
 
   </section>
 
-    <section class="tw-rounded-2 tw-overflow-hidden tw-bg-bgd-card-light dark:tw-bg-bgd-card-dark tw-p-4 tw-pb-2.5">
+    <section class="tw-rounded-2 tw-overflow-hidden tw-bg-bgd-card tw-p-4 tw-pb-2.5">
       <header class="tw-flex tw-justify-between tw-items-center tw-mb-4">
-        <h2 class="tw-text-16 tw-leading-normal tw-font-medium tw-text-t-normal-light dark:tw-text-t-normal-dark">
+        <h2 class="tw-text-16 tw-leading-normal tw-font-medium tw-text-t-normal">
           最近调仓
         </h2>
-<a class="tw-text-14 tw-text-t-light-light dark:tw-text-t-light-dark tw-flex tw-items-center" data-phx-link="redirect" data-phx-link-state="push" href="/stages/HBB_4/history">
+<a class="tw-text-14 tw-text-t-light tw-flex tw-items-center" data-phx-link="redirect" data-phx-link-state="push" href="/stages/HBB_4/history">
           查看历史
-<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 tw-ml-1 tw-h-3 tw-w-auto tw-text-t-muted-light dark:tw-text-t-muted-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+<svg class="tw-ml-1 tw-h-3 tw-w-auto tw-text-t-muted" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
 </svg>
 </a>
       </header>
       <aside class="
-  tw-bg-primary-light tw-bg-opacity-10
+  tw-bg-primary/10
   tw-px-3 tw-py-2.5 tw-mb-2.5
   tw-rounded
   ">
   <p class="
-    tw-text-12 tw-leading-normal tw-text-t-medium-light dark:tw-text-t-medium-dark
+    tw-text-12 tw-leading-normal tw-text-t-medium
     tw-text-justify
-    ">
+  ">
     
       2022年5月18日，买入一份沪深300，买入一份工银瑞信前沿医疗A
     
@@ -373,7 +388,7 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
 
 <table>
   <tbody class="
-    tw-text-t-normal-light dark:tw-text-t-normal-dark
+    tw-text-t-normal
     tw-text-14
     tw-leading-normal
     ">
@@ -394,9 +409,9 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     股票型
   </div>
   <div class="
-    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-text-12 tw-leading-normal tw-text-t-muted
     tw-font-num tw-font-bold
-    ">
+  ">
     001717
   </div>
 </div>
@@ -406,8 +421,8 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
             tw-text-right tw-align-top
             tw-font-medium tw-leading-normal
             tw-whitespace-nowrap
-            tw-text-primary-light dark:tw-text-primary-dark
-            ">
+            tw-text-primary
+          ">
             买入 1 份
           </td>
         </tr>
@@ -427,9 +442,9 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     股票型
   </div>
   <div class="
-    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-text-12 tw-leading-normal tw-text-t-muted
     tw-font-num tw-font-bold
-    ">
+  ">
     110020
   </div>
 </div>
@@ -439,8 +454,8 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
             tw-text-right tw-align-top
             tw-font-medium tw-leading-normal
             tw-whitespace-nowrap
-            tw-text-primary-light dark:tw-text-primary-dark
-            ">
+            tw-text-primary
+          ">
             买入 1 份
           </td>
         </tr>
@@ -462,9 +477,9 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     货币型
   </div>
   <div class="
-    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-text-12 tw-leading-normal tw-text-t-muted
     tw-font-num tw-font-bold
-    ">
+  ">
     000905
   </div>
 </div>
@@ -474,8 +489,8 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
             tw-text-right tw-align-top
             tw-font-medium tw-leading-normal
             tw-whitespace-nowrap
-            tw-text-red-light dark:tw-text-red-dark
-            ">
+            tw-text-red
+          ">
             卖出 1 份
           </td>
         </tr>
@@ -495,9 +510,9 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     货币型
   </div>
   <div class="
-    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-text-12 tw-leading-normal tw-text-t-muted
     tw-font-num tw-font-bold
-    ">
+  ">
     004972
   </div>
 </div>
@@ -507,8 +522,8 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
             tw-text-right tw-align-top
             tw-font-medium tw-leading-normal
             tw-whitespace-nowrap
-            tw-text-red-light dark:tw-text-red-dark
-            ">
+            tw-text-red
+          ">
             卖出 1 份
           </td>
         </tr>
@@ -520,23 +535,23 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
 
 
 
-    <section class="tw-rounded-2 tw-overflow-hidden tw-bg-bgd-card-light dark:tw-bg-bgd-card-dark tw-px-4 tw-py-6">
+    <section class="tw-rounded-2 tw-overflow-hidden tw-bg-bgd-card tw-px-4 tw-py-6">
       <header class="tw-mb-4">
         <h2 class="
-        tw-mb-0.5
-        tw-text-16 tw-leading-normal tw-font-medium tw-text-t-normal-light dark:tw-text-t-normal-dark
+          tw-mb-0.5
+          tw-text-16 tw-leading-normal tw-font-medium tw-text-t-normal
         ">
           历史业绩
         </h2>
         <p class="
-          tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+          tw-text-12 tw-leading-normal tw-text-t-muted
         ">
           最新数据：2022年6月21日
         </p>
       </header>
       <dl class="tw-flex tw-flex-wrap">
         <div class="tw-w-2/5 tw-mb-3">
-          <dt class="tw-text-12 tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60">
+          <dt class="tw-text-12 tw-font-normal tw-text-t-light/60">
             年化收益率
           </dt>
           <dd class="
@@ -546,26 +561,23 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
 
 
 
-<span class="tw-text-t-normal-light dark:tw-text-t-normal-dark">--</span>
+<span class="tw-text-t-normal">--</span>
 
           </dd>
         </div>
         <div class="tw-w-3/10 tw-mb-3">
-          <dt class="tw-text-12 tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60">
+          <dt class="tw-text-12 tw-font-normal tw-text-t-light/60">
             净值
           </dt>
           <dd class="
-          tw-font-num tw-font-bold
-          tw-text-14 tw-leading-normal tw-text-t-normal-light dark:tw-text-t-normal-dark
+            tw-font-num tw-font-bold
+            tw-text-14 tw-leading-normal tw-text-t-normal
           ">
 0.9450
           </dd>
         </div>
         <div class="tw-w-3/10 tw-mb-3">
-          <dt class="
-          tw-text-12 tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60
-          tw-text-right
-          ">
+          <dt class="tw-text-12 tw-font-normal tw-text-t-light/60 tw-text-right">
             累计收益率
           </dt>
           <dd class="
@@ -576,43 +588,40 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
 
 
 
-<span class="tw-text-green-light dark:tw-text-green-dark">-5.50%</span>
+<span class="tw-text-green">-5.50%</span>
 
           </dd>
         </div>
         <div class="tw-w-2/5">
-          <dt class="tw-text-12 tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60">
+          <dt class="tw-text-12 tw-font-normal tw-text-t-light/60">
             最大回撤
           </dt>
           <dd class="
-          tw-font-num tw-font-bold
-          tw-text-14 tw-leading-normal tw-text-t-normal-light dark:tw-text-t-normal-dark
+            tw-font-num tw-font-bold
+            tw-text-14 tw-leading-normal tw-text-t-normal
           ">
 14.19%
           </dd>
         </div>
         <div class="tw-w-3/10">
-          <dt class="tw-text-12 tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60">
+          <dt class="tw-text-12 tw-font-normal tw-text-t-light/60">
             年化波动率
           </dt>
           <dd class="
-          tw-font-num tw-font-bold
-          tw-text-14 tw-leading-normal tw-text-t-normal-light dark:tw-text-t-normal-dark
+            tw-font-num tw-font-bold
+            tw-text-14 tw-leading-normal tw-text-t-normal
           ">
 --
           </dd>
         </div>
         <div class="tw-w-3/10">
-          <dt class="
-          tw-text-12 tw-font-normal tw-text-t-light-light dark:tw-text-t-light-dark tw-text-opacity-60
-          tw-text-right
-          ">
+          <dt class="tw-text-12 tw-font-normal tw-text-t-light/60 tw-text-right">
             夏普比率
           </dt>
           <dd class="
-          tw-font-num tw-font-bold
-          tw-text-14 tw-leading-normal tw-text-t-normal-light dark:tw-text-t-normal-dark
-          tw-text-right
+            tw-font-num tw-font-bold
+            tw-text-14 tw-leading-normal tw-text-t-normal
+            tw-text-right
           ">
 --
           </dd>
@@ -626,10 +635,21 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     </canvas>
   </div>
 
-  <ul class="nav nav-fill nav-btn tw-m-0 tw-mt-4">
+  <ul class="
+    tw-flex tw-list-none
+    tw-mt-4 tw-text-12
+    tw-border tw-border-solid tw-border-sep
+  ">
     
-      <li class="nav-item">
-        <a class="nav-link tw-px-0" x-bind:class="{ active: currentTab == '#{month}' }" x-on:click.prevent="
+      <li class="
+        tw-flex-auto
+        tw-border-l tw-border-solid tw-border-sep first:tw-border-0
+        tw-text-center
+      ">
+        <a class="tw-block tw-py-1 tw-px-0" x-bind:class="{
+            &#39;tw-text-primary tw-font-medium&#39;: currentTab == &#39;1&#39;,
+            &#39;tw-text-t-light&#39;: currentTab != &#39;1&#39;
+          }" x-on:click.prevent="
             currentTab = &#39;1&#39;
             $dispatch(&#39;switch-tab&#39;, { month: &#39;1&#39; })
           " data-event-category="stage" data-event-label="nav" data-event-params="month: 1, stage_code: {@stage.code}">
@@ -637,8 +657,15 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
         </a>
       </li>
     
-      <li class="nav-item">
-        <a class="nav-link tw-px-0" x-bind:class="{ active: currentTab == '#{month}' }" x-on:click.prevent="
+      <li class="
+        tw-flex-auto
+        tw-border-l tw-border-solid tw-border-sep first:tw-border-0
+        tw-text-center
+      ">
+        <a class="tw-block tw-py-1 tw-px-0" x-bind:class="{
+            &#39;tw-text-primary tw-font-medium&#39;: currentTab == &#39;3&#39;,
+            &#39;tw-text-t-light&#39;: currentTab != &#39;3&#39;
+          }" x-on:click.prevent="
             currentTab = &#39;3&#39;
             $dispatch(&#39;switch-tab&#39;, { month: &#39;3&#39; })
           " data-event-category="stage" data-event-label="nav" data-event-params="month: 3, stage_code: {@stage.code}">
@@ -646,8 +673,15 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
         </a>
       </li>
     
-      <li class="nav-item">
-        <a class="nav-link tw-px-0" x-bind:class="{ active: currentTab == '#{month}' }" x-on:click.prevent="
+      <li class="
+        tw-flex-auto
+        tw-border-l tw-border-solid tw-border-sep first:tw-border-0
+        tw-text-center
+      ">
+        <a class="tw-block tw-py-1 tw-px-0" x-bind:class="{
+            &#39;tw-text-primary tw-font-medium&#39;: currentTab == &#39;6&#39;,
+            &#39;tw-text-t-light&#39;: currentTab != &#39;6&#39;
+          }" x-on:click.prevent="
             currentTab = &#39;6&#39;
             $dispatch(&#39;switch-tab&#39;, { month: &#39;6&#39; })
           " data-event-category="stage" data-event-label="nav" data-event-params="month: 6, stage_code: {@stage.code}">
@@ -655,8 +689,15 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
         </a>
       </li>
     
-      <li class="nav-item">
-        <a class="nav-link tw-px-0" x-bind:class="{ active: currentTab == '#{month}' }" x-on:click.prevent="
+      <li class="
+        tw-flex-auto
+        tw-border-l tw-border-solid tw-border-sep first:tw-border-0
+        tw-text-center
+      ">
+        <a class="tw-block tw-py-1 tw-px-0" x-bind:class="{
+            &#39;tw-text-primary tw-font-medium&#39;: currentTab == &#39;12&#39;,
+            &#39;tw-text-t-light&#39;: currentTab != &#39;12&#39;
+          }" x-on:click.prevent="
             currentTab = &#39;12&#39;
             $dispatch(&#39;switch-tab&#39;, { month: &#39;12&#39; })
           " data-event-category="stage" data-event-label="nav" data-event-params="month: 12, stage_code: {@stage.code}">
@@ -664,8 +705,15 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
         </a>
       </li>
     
-      <li class="nav-item">
-        <a class="nav-link tw-px-0" x-bind:class="{ active: currentTab == '#{month}' }" x-on:click.prevent="
+      <li class="
+        tw-flex-auto
+        tw-border-l tw-border-solid tw-border-sep first:tw-border-0
+        tw-text-center
+      ">
+        <a class="tw-block tw-py-1 tw-px-0" x-bind:class="{
+            &#39;tw-text-primary tw-font-medium&#39;: currentTab == &#39;Infinity&#39;,
+            &#39;tw-text-t-light&#39;: currentTab != &#39;Infinity&#39;
+          }" x-on:click.prevent="
             currentTab = &#39;Infinity&#39;
             $dispatch(&#39;switch-tab&#39;, { month: &#39;Infinity&#39; })
           " data-event-category="stage" data-event-label="nav" data-event-params="month: Infinity, stage_code: {@stage.code}">
@@ -679,14 +727,12 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     </section>
 
 
-    <section class="tw-rounded-2 tw-overflow-hidden tw-bg-bgd-card-light dark:tw-bg-bgd-card-dark tw-px-4 tw-py-6">
+    <section class="tw-rounded-2 tw-overflow-hidden tw-bg-bgd-card tw-px-4 tw-py-6">
       <header class="tw-mb-4">
-        <h2 class="tw-text-16 tw-leading-normal tw-font-medium tw-text-t-normal-light dark:tw-text-t-normal-dark">
+        <h2 class="tw-text-16 tw-leading-normal tw-font-medium tw-text-t-normal">
           组合成分
         </h2>
-        <p class="
-        tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
-        ">
+        <p class="tw-text-12 tw-leading-normal tw-text-t-muted">
           最新数据：2022年6月21日
         </p>
       </header>
@@ -698,10 +744,11 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
           </div>
         </div>
         <div class="tw-w-1/2 tw-flex tw-justify-center">
-          <ul class="tw-flex-shrink-0
-          tw-flex tw-flex-col tw-justify-center
-          tw-text-14 tw-leading-normal tw-text-t-normal-light dark:tw-text-t-normal-dark
-          tw-space-y-3
+          <ul class="
+            tw-shrink-0
+            tw-flex tw-flex-col tw-justify-center
+            tw-text-14 tw-leading-normal tw-text-t-normal
+            tw-space-y-3
           ">
 
 
@@ -727,34 +774,37 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
         <thead>
           <tr>
             <th class="
-            tw-whitespace-nowrap
-            tw-tw-full
-            tw-text-12 tw-font-medium tw-text-t-light-light dark:tw-text-t-light-dark
-            tw-pb-1.5">
+              tw-whitespace-nowrap
+              tw-tw-full
+              tw-text-12 tw-font-medium tw-text-t-light
+              tw-pb-1.5
+            ">
               基金名称
             </th>
             <th class="
-            tw-whitespace-nowrap
-            tw-text-right
-            tw-text-12 tw-font-medium tw-text-t-light-light dark:tw-text-t-light-dark
-            tw-pl-6
-            tw-pb-1.5">
+              tw-whitespace-nowrap
+              tw-text-right
+              tw-text-12 tw-font-medium tw-text-t-light
+              tw-pl-6
+              tw-pb-1.5
+            ">
               份数
             </th>
             <th class="
-            tw-whitespace-nowrap
-            tw-text-right
-            tw-text-12 tw-font-medium tw-text-t-light-light dark:tw-text-t-light-dark
-            tw-pl-6
-            tw-pb-1.5">
+              tw-whitespace-nowrap
+              tw-text-right
+              tw-text-12 tw-font-medium tw-text-t-light
+              tw-pl-6
+              tw-pb-1.5
+            ">
               持仓占比
             </th>
           </tr>
         </thead>
         <tbody class="
-        tw-text-t-normal-light dark:tw-text-t-normal-dark
-        tw-text-14
-        tw-leading-normal
+          tw-text-t-normal
+          tw-text-14
+          tw-leading-normal
         ">
 
             <tr>
@@ -772,9 +822,9 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     股票型
   </div>
   <div class="
-    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-text-12 tw-leading-normal tw-text-t-muted
     tw-font-num tw-font-bold
-    ">
+  ">
     090010
   </div>
 </div>
@@ -811,9 +861,9 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     股票型
   </div>
   <div class="
-    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-text-12 tw-leading-normal tw-text-t-muted
     tw-font-num tw-font-bold
-    ">
+  ">
     160119
   </div>
 </div>
@@ -850,9 +900,9 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     股票型
   </div>
   <div class="
-    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-text-12 tw-leading-normal tw-text-t-muted
     tw-font-num tw-font-bold
-    ">
+  ">
     000968
   </div>
 </div>
@@ -889,9 +939,9 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     股票型
   </div>
   <div class="
-    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-text-12 tw-leading-normal tw-text-t-muted
     tw-font-num tw-font-bold
-    ">
+  ">
     164906
   </div>
 </div>
@@ -928,9 +978,9 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     股票型
   </div>
   <div class="
-    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-text-12 tw-leading-normal tw-text-t-muted
     tw-font-num tw-font-bold
-    ">
+  ">
     110020
   </div>
 </div>
@@ -967,9 +1017,9 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     股票型
   </div>
   <div class="
-    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-text-12 tw-leading-normal tw-text-t-muted
     tw-font-num tw-font-bold
-    ">
+  ">
     001717
   </div>
 </div>
@@ -1006,9 +1056,9 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     股票型
   </div>
   <div class="
-    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-text-12 tw-leading-normal tw-text-t-muted
     tw-font-num tw-font-bold
-    ">
+  ">
     002656
   </div>
 </div>
@@ -1045,9 +1095,9 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     股票型
   </div>
   <div class="
-    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-text-12 tw-leading-normal tw-text-t-muted
     tw-font-num tw-font-bold
-    ">
+  ">
     000942
   </div>
 </div>
@@ -1084,9 +1134,9 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
     货币型
   </div>
   <div class="
-    tw-text-12 tw-leading-normal tw-text-t-muted-light dark:tw-text-t-muted-dark
+    tw-text-12 tw-leading-normal tw-text-t-muted
     tw-font-num tw-font-bold
-    ">
+  ">
     000905
   </div>
 </div>
@@ -1114,7 +1164,7 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
 
 </div></div>
     <aside class="tw-pt-8 tw-pb-10">
-      <p class="tw-text-t-muted-light dark:tw-text-t-muted-dark tw-text-12 tw-leading-normal tw-text-center">
+      <p class="tw-text-t-muted tw-text-12 tw-leading-normal tw-text-center">
         过往业绩不预示未来表现<br>市场有风险，投资需谨慎
       </p>
     </aside>
@@ -1122,59 +1172,79 @@ tw-pt-17 md:tw-pt-12 app:tw-pt-0">
 
     </div>
 
-<div id="sharedModalConfirm" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-<img src="https://cdn.youzhiyouxing.cn/static/images/download_bg-128b076efcab665f67fb8c1eab216233.svg?vsn=d">
-      <div class="d-modal-body">
-        <h3>温馨提示</h3>
-        <p>请下载最新版 App 体验更多功能</p>
+<div id="dialog" phx-update="ignore" x-cloak x-data x-show="$store.dialog.open" x-on:dialog:show.window="$store.dialog.handleCustomEvent($event)" role="dialog" aria-modal="true" aria-labelledby="dialog-title" class="tw-fixed tw-inset-0 tw-z-40 tw-select-none">
+  <div x-show="$store.dialog.open" x-transition.opacity.duration.250ms class="tw-fixed tw-inset-0 tw-bg-black/60">
+  </div>
+
+  <div x-show="$store.dialog.open" x-transition.duration.250ms x-on:click="$store.dialog.hide()" class="tw-relative tw-h-full tw-w-full tw-flex tw-justify-center tw-items-center">
+    <div x-on:click.stop x-trap.noscroll.inert="$store.dialog.open" class="
+        tw-bg-bgd-card tw-overflow-y-auto tw-w-[80%] tw-max-w-xl
+        tw-rounded-lg tw-overflow-hidden
+      ">
+      <div class="tw-pt-6 tw-pb-4 tw-px-5 tw-border-b tw-border-solid tw-border-sep/50">
+        <h2 id="dialog-title" class="tw-mb-4 tw-font-medium tw-text-18 tw-leading-snug tw-text-center tw-text-t-normal" x-text="$store.dialog.title">
+        </h2>
+        <p class="tw-text-14 tw-leading-normal tw-text-t-light" x-text="$store.dialog.description">
+        </p>
       </div>
-      <div class="d-modal-footer">
-        <a class="btn btn-confirm btn-primary" href="/n/download">
-          下载
-        </a>
-        <button type="button" class="btn btn-cancel" data-dismiss="modal">
-          取消
+      <div class="tw-flex">
+        <template x-if="$store.dialog.isCancelButtonEnabled">
+          <button class="
+              tw-flex-1 tw-py-3.5 tw-bg-transparent tw-text-t-medium
+              tw-appearance-none tw-outline-none
+              tw-text-16 tw-font-medium tw-leading-tight
+              tw-border-r tw-border-solid tw-border-sep/50
+            " x-text="$store.dialog.cancelButtonText" x-on:click="$store.dialog.handleCancelButton()">
+          </button>
+        </template>
+        <button class="
+            tw-flex-1 tw-py-3.5 tw-bg-transparent tw-text-primary
+            tw-appearance-none tw-outline-none
+            tw-text-16 tw-font-medium tw-leading-tight
+            tw-border-0
+          " x-text="$store.dialog.mainButtonText" x-on:click="$store.dialog.handleMainButton()">
         </button>
       </div>
     </div>
   </div>
 </div>
-<div id="dialog" phx-update="ignore" x-cloak x-data x-show="$store.dialog.open" x-on:dialog:show.window="$store.dialog.handleCustomEvent($event)" role="dialog" aria-modal="true" aria-labelledby="modal-title" class="tw-scope tw-fixed tw-inset-0 tw-z-40 tw-select-none">
-  <div x-show="$store.dialog.open" x-transition.opacity.duration.250ms class="tw-fixed tw-inset-0 tw-bg-[#000] tw-bg-opacity-60">
+<div id="modal" phx-update="ignore" x-cloak x-data x-show="$store.modal.open" x-on:modal:show.window="$store.modal.handleCustomEvent($event)" role="modal" aria-modal="true" aria-labelledby="modal-title" class="tw-fixed tw-inset-0 tw-z-40 tw-select-none">
+  <div x-show="$store.modal.open" x-transition.opacity.duration.250ms class="tw-fixed tw-inset-0 tw-bg-black/60">
   </div>
 
-  <div x-show="$store.dialog.open" x-transition.duration.250ms x-on:click="$store.dialog.hide()" class="tw-relative tw-h-full tw-w-full tw-flex tw-justify-center tw-items-center">
-    <div x-on:click.stop x-trap.noscroll.inert="$store.dialog.open" class="
-        tw-bg-bgd-light dark:tw-bg-bgd-dark tw-overflow-y-auto tw-w-[80%] tw-max-w-xl
+  <div x-show="$store.modal.open" x-transition.duration.250ms x-on:click="$store.modal.hide()" class="tw-relative tw-h-full tw-w-full tw-flex tw-justify-center tw-items-center">
+    <div x-on:click.stop x-trap.noscroll.inert="$store.modal.open" class="
+        tw-bg-bgd-card tw-overflow-y-auto tw-w-[280px]
         tw-rounded-lg tw-overflow-hidden
       ">
-      <div class="tw-pt-6 tw-pb-4 tw-px-5 tw-border-b tw-border-solid tw-border-sep-light dark:tw-border-sep-dark tw-border-opacity-50">
+<img src="https://cdn.youzhiyouxing.cn/static/images/download_bg-128b076efcab665f67fb8c1eab216233.svg?vsn=d">
+      <div class="tw-pt-6 tw-pb-4 tw-px-5">
         <h2 id="modal-title" class="
-          tw-font-medium tw-text-18 tw-leading-snug tw-text-center tw-text-t-normal-light dark:tw-text-t-normal-dark
-          tw-mb-4
-        " x-text="$store.dialog.title"></h2>
-        <p class="tw-text-14 tw-leading-normal tw-text-t-light-light dark:tw-text-t-light-dark" x-text="$store.dialog.description">
+            tw-mb-4
+            tw-font-medium tw-text-18 tw-leading-snug tw-text-center tw-text-t-normal
+          " x-text="$store.modal.title">
+        </h2>
+        <p class="tw-text-14 tw-text-center tw-leading-normal tw-text-t-light" x-text="$store.modal.description">
         </p>
-      </div>
-      <div class="tw-flex tw-divide-x tw-divide-solid tw-divide-sep-light dark:tw-divide-sep-dark tw-divide-opacity-50">
-        <template x-if="$store.dialog.isCancelButtonEnabled">
-          <button class="
-            tw-flex-1 tw-py-3.5 tw-bg-transparent tw-text-t-medium-light dark:tw-text-t-medium-dark
-            tw-appearance-none tw-outline-none
-            tw-text-16 tw-font-medium tw-leading-tight
-            tw-border-none
-          " x-text="$store.dialog.cancelButtonText" x-on:click="$store.dialog.handleCancelButton()">
-          </button>
-        </template>
-        <button class="
-            tw-flex-1 tw-py-3.5 tw-bg-transparent tw-text-primary-light dark:tw-text-primary-dark
-            tw-appearance-none tw-outline-none
-            tw-text-16 tw-font-medium tw-leading-tight
-            tw-border-none
-          " x-text="$store.dialog.mainButtonText" x-on:click="$store.dialog.handleMainButton()">
-        </button>
+
+        <div class="tw-mt-6 tw-flex tw-flex-col tw-justify-center tw-items-center tw-space-y-3">
+          <a class="
+              tw-flex-1 tw-px-20 tw-py-2.5 tw-bg-primary tw-text-white
+              tw-appearance-none tw-outline-none
+              tw-text-14 tw-font-medium tw-leading-tight
+              tw-border-0 tw-rounded-full
+            " x-text="$store.modal.mainButtonText" href="/n/download">
+          </a>
+          <template x-if="$store.modal.isCancelButtonEnabled">
+            <button class="
+                tw-flex-1 tw-px-20 tw-py-2.5 tw-bg-transparent tw-text-t-muted
+                tw-appearance-none tw-outline-none
+                tw-text-14 tw-font-medium tw-leading-tight
+                tw-border-0 tw-rounded-full
+              " x-text="$store.modal.cancelButtonText" x-on:click="$store.modal.handleCancelButton()">
+            </button>
+          </template>
+        </div>
       </div>
     </div>
   </div>
